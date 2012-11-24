@@ -1,0 +1,14 @@
+
+Working Heroku Java/J2EE App
+============================
+
+Basic integration between several frameworks, including:
+Spring MVC 3.1
+Hibernate ORM 3.6 
+PostgreSQL 8.3
+Maven 3
+Jetty 7.4.5
+Heroku Cedar
+
+HOW TO USE? 
+http://javaonheroku.wordpress.com/2012/07/08/spring-mvc-with-hibernate-orm-on-heroku/
