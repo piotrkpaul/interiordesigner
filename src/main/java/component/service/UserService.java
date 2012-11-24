@@ -34,35 +34,4 @@ public class UserService  {
     public List<UserEntity> getAllUsers() {
         return userDAO.getAll(new UserEntity());
     }
-
-    public UserDetails loadUserByUsername(String userEmail) throws UsernameNotFoundException {
-
-        UserEntity userFromDatabase = userDAO.getByEmail(userEmail);
-
-        if(userFromDatabase != null) {
-
-            List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
-
-            if (userFromDatabase.getRole().equals("ROLE_ADMIN")) {
-                roles.add(new SimpleGrantedAuthority("ROLE_ADMIN"));
-                roles.add(new SimpleGrantedAuthority("ROLE_USER"));
-            }
-            else if (userFromDatabase.getRole().equals("ROLE_USER")) {
-                roles.add(new SimpleGrantedAuthority("ROLE_USER"));
-            }
-            else {
-                try {
-                    throw new RoleNotFoundException("User has no role declared.");
-                } catch (RoleNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-
-            return new User(userFromDatabase.getEmail(), userFromDatabase.getPassword(), roles);
-        }
-
-        else {
-            throw new UsernameNotFoundException("User with email : " + userEmail + " not found in database.");
-        }
-    }
 }

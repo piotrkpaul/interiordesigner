@@ -3,6 +3,7 @@ package entity;
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.sql.Timestamp;
 
 /**
@@ -14,7 +15,10 @@ import java.sql.Timestamp;
  */
 @javax.persistence.Table(name = "user", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
-public class UserEntity {
+public class UserEntity implements Serializable {
+
+    private static final long serialVersionUID = 1L;
+
     private int id;
 
     @javax.persistence.Column(name = "id")
