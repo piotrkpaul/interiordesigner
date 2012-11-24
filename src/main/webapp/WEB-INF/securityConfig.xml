@@ -8,13 +8,14 @@
            http://www.springframework.org/schema/security/spring-security-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
 
     <http auto-config="true" use-expressions="false">
-        <logout logout-url="/session_util/logout" />
+
+        <form-login login-page="/logowanie"
+                    authentication-failure-url="/logowanie?error=wrong"
+                    default-target-url="/"/>
+        <logout logout-success-url="/" />
+
         <intercept-url pattern="/user**" access="ROLE_ADMIN" />
     </http>
-
-
-    <beans:bean id="userDetailsService" class="component.service.UserSecurityService"></beans:bean>
-    <context:component-scan base-package="component" />
 
     <beans:bean id="daoAuthenticationProvider"
                 class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">

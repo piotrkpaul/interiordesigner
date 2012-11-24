@@ -14,6 +14,7 @@
     <definition name="doubleColumnLayout" template="/WEB-INF/views/front/templates/doubleColumnLayout.jsp">
         <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
         <put-attribute name="navbar" value="/WEB-INF/views/front/general/navbar.jsp" />
+        <put-attribute name="intro" value="/WEB-INF/views/front/general/intro.jsp" />
         <put-attribute name="sidebar" value="/WEB-INF/views/front/general/sidebar.jsp" />
         <put-attribute name="content" value="" />
         <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
@@ -26,7 +27,11 @@
         <put-attribute name="content" value="/WEB-INF/views/front/pages/home.jsp" />
     </definition>
 
-    <definition name="userView" extends="singleColumnLayout">
+    <definition name="loginScreen" extends="singleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/login.jsp" />
+    </definition>
+
+    <definition name="userView" extends="doubleColumnLayout">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
     </definition>
 

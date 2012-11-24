@@ -18,4 +18,10 @@ public class HomeController {
         return "homeScreen";
     }
 
+    @RequestMapping({"/logowanie"})
+    public String showLoginPage(Map<String, Object> model) {
+        return "loginScreen";
+    }
+
+
 }

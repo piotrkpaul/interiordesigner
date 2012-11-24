@@ -4,5 +4,7 @@
 
 <tiles:insertAttribute name="head" />
 <tiles:insertAttribute name="navbar" />
-<tiles:insertAttribute name="content" />
+<div class="container">
+    <tiles:insertAttribute name="content" />
+</div>
 <tiles:insertAttribute name="bottom" />
