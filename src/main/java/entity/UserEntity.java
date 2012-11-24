@@ -87,6 +87,19 @@ public class UserEntity {
         this.email = email;
     }
 
+    private String role;
+
+    @javax.persistence.Column(name = "role")
+    @Basic
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
+    }
+
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -4,6 +4,7 @@ package component.dao.hibernate;
 import component.dao.UserDAOInterface;
 import entity.UserEntity;
 import org.hibernate.SessionFactory;
+import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
@@ -35,6 +36,10 @@ public class UserDAO implements UserDAOInterface {
 
     public UserEntity getById(Integer uid) {
         return (UserEntity) sessionFactory.getCurrentSession().get(UserEntity.class, uid);
+    }
+
+    public UserEntity getByEmail(String email) {
+        return (UserEntity) sessionFactory.getCurrentSession().createCriteria(UserEntity.class).add(Restrictions.eq("email", email)).uniqueResult();
     }
 
     public List<UserEntity> getAll(UserEntity userEntity) {
