@@ -107,6 +107,8 @@
     <orderEntry type="library" scope="RUNTIME" name="Maven: javax.mail:mail:1.4" level="project" />
     <orderEntry type="library" scope="RUNTIME" name="Maven: javax.jms:jms:1.1" level="project" />
     <orderEntry type="library" name="Maven: javax.servlet:jstl:1.1.2" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-taglibs:3.1.0.RELEASE" level="project" />
+    <orderEntry type="library" name="Maven: org.springframework.security:spring-security-acl:3.1.0.RELEASE" level="project" />
   </component>
 </module>
 
