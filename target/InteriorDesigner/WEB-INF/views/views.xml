@@ -20,6 +20,11 @@
         <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
     </definition>
 
+    <definition name="loginPage" template="/WEB-INF/views/front/templates/loginPage.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="content" value="/WEB-INF/views/front/general/login.jsp" />
+    </definition>
+
 
 
     <!-- Views config -->
@@ -33,6 +38,16 @@
 
     <definition name="userView" extends="doubleColumnLayout">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
+    </definition>
+
+    <definition name="catalogDisplayAll" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/catalog/list.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/catalog/catalogSidebar.jsp" />
+    </definition>
+
+    <definition name="catalogDisplayItem" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/catalog/itemView.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/catalog/catalogItemViewSidebar.jsp" />
     </definition>
 
 </tiles-definitions>

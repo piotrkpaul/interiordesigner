@@ -1,5 +1,7 @@
 package entity;
 
+import org.springframework.security.crypto.codec.Base64;
+
 import javax.persistence.Basic;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -87,18 +89,6 @@ public class FurnitureitemsEntity {
         this.itemImageUrl = itemImageUrl;
     }
 
-    private byte[] itemBase64Image;
-
-    @javax.persistence.Column(name = "itemBase64Image")
-    @Basic
-    public byte[] getItemBase64Image() {
-        return itemBase64Image;
-    }
-
-    public void setItemBase64Image(byte[] itemBase64Image) {
-        this.itemBase64Image = itemBase64Image;
-    }
-
     private double itemPrice;
 
     @javax.persistence.Column(name = "itemPrice")
@@ -159,7 +149,6 @@ public class FurnitureitemsEntity {
         if (sizeY != that.sizeY) return false;
         if (sizeZ != that.sizeZ) return false;
         if (id != null ? !id.equals(that.id) : that.id != null) return false;
-        if (!Arrays.equals(itemBase64Image, that.itemBase64Image)) return false;
         if (itemCategory != null ? !itemCategory.equals(that.itemCategory) : that.itemCategory != null) return false;
         if (itemDescription != null ? !itemDescription.equals(that.itemDescription) : that.itemDescription != null)
             return false;
@@ -180,7 +169,6 @@ public class FurnitureitemsEntity {
         result = 31 * result + (typeOfRoom != null ? typeOfRoom.hashCode() : 0);
         result = 31 * result + (itemDescription != null ? itemDescription.hashCode() : 0);
         result = 31 * result + (itemImageUrl != null ? itemImageUrl.hashCode() : 0);
-        result = 31 * result + (itemBase64Image != null ? Arrays.hashCode(itemBase64Image) : 0);
         temp = itemPrice != +0.0d ? Double.doubleToLongBits(itemPrice) : 0L;
         result = 31 * result + (int) (temp ^ (temp >>> 32));
         result = 31 * result + sizeX;

@@ -20,7 +20,6 @@ public class UserController {
     public String listUsers(Map<String, Object> model) {
 
         model.put("userList", userService.getAllUsers());
-
         return "userView";
 
     }

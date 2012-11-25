@@ -3,7 +3,7 @@
 
 <!-- Main hero unit for a primary marketing message or call to action -->
 <div class="hero-unit">
-    <h1>Hello, world!</h1>
+    <h1>Interior Designer!</h1>
 
     <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero
         unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
@@ -14,22 +14,18 @@
 <!-- Example row of columns -->
 <div class="row">
     <div class="span4">
-        <h2>Heading</h2>
+        <h2>Katalog mebli</h2>
 
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
+        <p>Korzystając z naszego systemu, otrzymujesz dostęp do katalogu ponad 800 wyselekcjonowanych mebli, dostępnych dla Ciebie z pełnym opisem. </p>
 
-        <p><a class="btn" href="#">View details &raquo;</a></p>
+        <p><a class="btn" href="/catalog">Przejdź do katalogu&raquo;</a></p>
     </div>
     <div class="span4">
-        <h2>Heading</h2>
+        <h2>Logowanie</h2>
 
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris
-            condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod.
-            Donec sed odio dui. </p>
+        <p>Przejdź do sekcji logowania do systemu. </p>
 
-        <p><a class="btn" href="#">View details &raquo;</a></p>
+        <p><a class="btn" href="/logowanie">Logowanie &raquo;</a></p>
     </div>
     <div class="span4">
         <h2>Heading</h2>

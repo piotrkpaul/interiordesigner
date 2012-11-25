@@ -8,9 +8,10 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <link href="resources/css/bootstrap.css" rel="stylesheet">
-    <link href="resources/css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="resources/css/docs.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/bootstrap-responsive.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/docs.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet">
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
