@@ -3,16 +3,24 @@ package component.service;
 import component.dao.hibernate.UserDAO;
 import entity.UserEntity;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.management.relation.RoleNotFoundException;
+import javax.servlet.http.HttpServletRequest;
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,8 +31,10 @@ public class UserService  {
     @Autowired
     private UserDAO userDAO;
 
+    @Autowired
+    protected AuthenticationManager authenticationManager;
+
     public void addUser(UserEntity user) {
-        System.out.println(user.getEmail());
         userDAO.add(user);
     }
 
@@ -33,5 +43,41 @@ public class UserService  {
     }
     public List<UserEntity> getAllUsers() {
         return userDAO.getAll(new UserEntity());
+    }
+
+    public UserEntity createNewUserAndAuthenticate(UserEntity user, HttpServletRequest request) {
+
+        /* Generate timestamp of registration */
+        Timestamp regDate = new Timestamp(new java.util.Date().getTime());
+        user.setRegistrationDate(regDate);
+
+        /* SHA-1 from plain text password */
+        ShaPasswordEncoder passwordEncoder = new ShaPasswordEncoder();
+        String encodedPwd = passwordEncoder.encodePassword(user.getPassword(), null);
+        user.setPassword(encodedPwd);
+
+        /* List of authority */
+        List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
+        roles.add(new SimpleGrantedAuthority("ROLE_USER"));
+        user.setRole("ROLE_USER");
+
+        /* Actual database save */
+        this.addUser(user);
+
+        /* Loging user in, and redirecting to user view */
+        authenticateUserAndSetSession(user, request);
+
+        return user;
+    }
+
+    private void authenticateUserAndSetSession(UserEntity user, HttpServletRequest request) {
+        UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
+
+        request.getSession();
+
+        token.setDetails(new WebAuthenticationDetails(request));
+        Authentication authenticatedUser = authenticationManager.authenticate(token);
+
+        SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
     }
 }

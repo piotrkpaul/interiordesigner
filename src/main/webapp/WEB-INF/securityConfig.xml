@@ -14,7 +14,7 @@
                     default-target-url="/"/>
         <logout logout-success-url="/" />
 
-        <intercept-url pattern="/user**" access="ROLE_ADMIN" />
+
     </http>
 
     <beans:bean id="daoAuthenticationProvider"

@@ -18,14 +18,14 @@
 
         <p>Korzystając z naszego systemu, otrzymujesz dostęp do katalogu ponad 800 wyselekcjonowanych mebli, dostępnych dla Ciebie z pełnym opisem. </p>
 
-        <p><a class="btn" href="/catalog">Przejdź do katalogu&raquo;</a></p>
+        <p><a class="btn" href="catalog">Przejdź do katalogu&raquo;</a></p>
     </div>
     <div class="span4">
         <h2>Logowanie</h2>
 
         <p>Przejdź do sekcji logowania do systemu. </p>
 
-        <p><a class="btn" href="/logowanie">Logowanie &raquo;</a></p>
+        <p><a class="btn" href="logowanie">Logowanie &raquo;</a></p>
     </div>
     <div class="span4">
         <h2>Heading</h2>

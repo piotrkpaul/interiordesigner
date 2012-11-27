@@ -1,8 +1,14 @@
 package entity;
 
+import org.hibernate.validator.constraints.Email;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.sql.Timestamp;
 
@@ -23,6 +29,7 @@ public class UserEntity implements Serializable {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }
@@ -30,7 +37,8 @@ public class UserEntity implements Serializable {
     public void setId(int id) {
         this.id = id;
     }
-
+    @Size (min=3, max=25, message = "Imię może zawierać od 3 do 25 liter.")
+    @Pattern(regexp = "^[a-zA-Z]+$", message = "Imię może zawierać tylko litery.")
     private String name;
 
     @javax.persistence.Column(name = "name")
@@ -43,6 +51,8 @@ public class UserEntity implements Serializable {
         this.name = name;
     }
 
+    @Size (min=3, max=25, message = "Nazwisko może zawierać od 3 do 25 liter.")
+    @Pattern(regexp = "^[a-zA-Z]+$", message = "Nazwisko może zawierać tylko litery.")
     private String surname;
 
     @javax.persistence.Column(name = "surname")
@@ -51,10 +61,12 @@ public class UserEntity implements Serializable {
         return surname;
     }
 
+
     public void setSurname(String surname) {
         this.surname = surname;
     }
 
+    @Size (min=5, max=64, message = "Hasło nie może być krótsze, niż 6 znaków.")
     private String password;
 
     @javax.persistence.Column(name = "password")
@@ -79,6 +91,7 @@ public class UserEntity implements Serializable {
         this.registrationDate = registrationDate;
     }
 
+    @Email (message = "Podano błędny adres email.")
     private String email;
 
     @javax.persistence.Column(name = "email")
