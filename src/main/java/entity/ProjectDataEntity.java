@@ -2,6 +2,7 @@ package entity;
 
 import javax.persistence.Basic;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.sql.Timestamp;
 import java.util.Arrays;
@@ -20,6 +21,7 @@ public class ProjectDataEntity {
 
     @javax.persistence.Column(name = "id")
     @Id
+    @GeneratedValue
     public int getId() {
         return id;
     }

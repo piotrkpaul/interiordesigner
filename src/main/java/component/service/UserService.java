@@ -44,6 +44,13 @@ public class UserService  {
     public List<UserEntity> getAllUsers() {
         return userDAO.getAll(new UserEntity());
     }
+    public boolean checkIfExist(String email) {
+        if(userDAO.getByEmail(email)!=null) {
+           return true;
+        } else {
+          return false;
+        }
+    }
 
     public UserEntity createNewUserAndAuthenticate(UserEntity user, HttpServletRequest request) {
 
@@ -70,6 +77,8 @@ public class UserService  {
         return user;
     }
 
+
+    /* Utilities */
     private void authenticateUserAndSetSession(UserEntity user, HttpServletRequest request) {
         UsernamePasswordAuthenticationToken token = new UsernamePasswordAuthenticationToken(user.getEmail(), user.getPassword());
 

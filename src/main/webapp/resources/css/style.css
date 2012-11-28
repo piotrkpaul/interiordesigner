@@ -51,3 +51,9 @@
     margin-bottom: 15px;
     padding: 7px 9px;
 }
+#userEntity input.emailAvailable {
+    background: #CFF8D1 url(../img/valid_tick.png) no-repeat 300px !important;
+}
+#userEntity input.emailExists {
+    background: #F8D7D7 url(../img/invalid_tick.png) no-repeat 300px !important;
+}

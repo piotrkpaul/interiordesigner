@@ -11,9 +11,9 @@
         <sf:input path="surname" min="3" maxlength="30" id="user_surname" class="input-block-level"
                   placeholder="Nazwisko"/>
         <sf:errors path="email" cssClass="alert alert-error" element="div" />
-        <sf:input path="email" min="5" maxlength="64" id="user_email" class="input-block-level" placeholder="Email"/>
+        <sf:input path="email" min="5" maxlength="64" id="user_email" class="input-block-level" placeholder="Email" onblur="ajaxCheckIfAvailable();"/>
         <sf:errors path="password" cssClass="alert alert-error" element="div" />
-        <sf:input path="password" min="3" maxlength="60" id="user_pasword" class="input-block-level" placeholder="Hasło"/>
+        <sf:password path="password" min="3" maxlength="60" id="user_pasword" class="input-block-level" placeholder="Hasło"/>
         <input type="submit" value="Rejestracja" class="btn btn-success" />
     </sf:form>
 
@@ -21,6 +21,7 @@
 <!-- /container -->
 
 <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
+<script src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
 <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
 </body>
 <style type="text/css">

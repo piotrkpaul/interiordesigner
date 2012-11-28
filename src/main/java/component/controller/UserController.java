@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +50,19 @@ public class UserController {
         return "userView";
     }
 
+    @RequestMapping(value="/check", method = RequestMethod.POST)
+    @ResponseBody
+    public void checkIfAlreadyRegistred(@RequestParam("email") String email, HttpServletResponse response) throws IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html");
+
+        if(userService.checkIfExist(email)) {
+            response.getWriter().write("alreadyExists");
+        }
+        else {
+            response.getWriter().write("available");
+        }
+    }
 
 
 }
