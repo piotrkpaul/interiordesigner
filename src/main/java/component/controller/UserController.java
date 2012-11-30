@@ -34,21 +34,24 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    @RequestMapping(method = RequestMethod.GET)
+    public String listUsers(Map<String, Object> model) {
 
-    @RequestMapping(value = "/{uid}", method = RequestMethod.GET, headers = "Accept=application/json")
-    @ResponseBody
-    public UserEntity restListUsers(@PathVariable Integer uid) {
-        return userService.getById(uid);
+        model.put("userList", userService.getAllUsers());
+
+        return "userListView";
 
     }
 
-    @RequestMapping(value = "/uid}", method= RequestMethod.GET)
+    @RequestMapping(value = "/{uid}", method= RequestMethod.GET, produces="text/html")
     public String getUserById(@PathVariable Integer uid, Map<String, Object> model) {
 
         model.put("userEntity", userService.getById(uid));
 
-        return "userView";
+        return "showUserProfile";
     }
+
+    /* Api */
 
     @RequestMapping(value="/check", method = RequestMethod.POST)
     @ResponseBody
@@ -64,5 +67,17 @@ public class UserController {
         }
     }
 
+    /* RESTful custom authorisation */
+    @RequestMapping(value="/api_login/", method = RequestMethod.POST)
+    @ResponseBody
+    public UserEntity apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
+        UserEntity authUser = userService.getByEmail(email);
+        if(authUser!=null && authUser.getPassword().equals(password)) {
+            return authUser;
+        }
+        else {
+            return new UserEntity();
+        }
 
+    }
 }

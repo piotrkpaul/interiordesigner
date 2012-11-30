@@ -41,9 +41,16 @@ public class UserService  {
     public UserEntity getById(Integer uid) {
         return userDAO.getById(uid);
     }
+
+    public UserEntity getByEmail(String email) {
+        return userDAO.getByEmail(email);
+    }
+
     public List<UserEntity> getAllUsers() {
         return userDAO.getAll(new UserEntity());
     }
+
+
     public boolean checkIfExist(String email) {
         if(userDAO.getByEmail(email)!=null) {
            return true;

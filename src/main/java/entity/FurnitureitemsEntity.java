@@ -1,5 +1,7 @@
 package entity;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.security.crypto.codec.Base64;
 
 import javax.persistence.Basic;
@@ -16,6 +18,7 @@ import java.util.Arrays;
  */
 @javax.persistence.Table(name = "furnitureitems", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
+@Cache(usage= CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class FurnitureitemsEntity {
     private String id;
 

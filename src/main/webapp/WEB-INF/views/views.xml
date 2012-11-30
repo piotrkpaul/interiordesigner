@@ -38,8 +38,8 @@
     <definition name="userListView" extends="doubleColumnLayout">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
     </definition>
-    <definition name="userView" extends="doubleColumnLayout">
-        <put-attribute name="content" value="/WEB-INF/views/front/pages/userView.jsp" />
+    <definition name="showUserProfile" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/user/userProfile.jsp" />
     </definition>
 
     <definition name="catalogDisplayAll" extends="doubleColumnLayout">
