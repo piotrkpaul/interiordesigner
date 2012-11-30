@@ -35,7 +35,6 @@
     <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet.jsp:jsp-api:2.1" level="project" />
     <orderEntry type="library" name="Maven: net.sf.ehcache:ehcache-core:2.4.7" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.5.10" level="project" />
-    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-servlet:2.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-core:2.1.4" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tiles:tiles-api:2.1.4" level="project" />
@@ -70,6 +69,7 @@
     <orderEntry type="library" name="Maven: aopalliance:aopalliance:1.0" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-expression:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.springframework:spring-context-support:3.1.0.RELEASE" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-test:3.1.0.RELEASE" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.9" level="project" />
     <orderEntry type="library" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.9" level="project" />
     <orderEntry type="library" name="Maven: mysql:mysql-connector-java:5.1.6" level="project" />

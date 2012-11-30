@@ -26,7 +26,7 @@ public class UserDAO implements UserDAOInterface {
     }
 
     public void update(UserEntity userEntity) {
-        sessionFactory.getCurrentSession().update(userEntity);
+        sessionFactory.getCurrentSession().merge(userEntity);
     }
 
     public void delete(UserEntity userEntity) {

@@ -4,6 +4,7 @@ import component.service.UserService;
 import entity.UserEntity;
 import javassist.expr.NewArray;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.encoding.ShaPasswordEncoder;
@@ -14,6 +15,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindException;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
@@ -53,6 +55,17 @@ public class UserController {
 
     /* Api */
 
+    @RequestMapping(method = RequestMethod.POST)
+    @ResponseStatus(HttpStatus.CREATED)
+    public @ResponseBody UserEntity apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException {
+        if(bindingResult.hasErrors()) {
+            throw new BindException(bindingResult);
+        }
+        else {
+            return userService.createNewUserAndAuthenticate(userEntity, request, false);
+        }
+    }
+
     @RequestMapping(value="/check", method = RequestMethod.POST)
     @ResponseBody
     public void checkIfAlreadyRegistred(@RequestParam("email") String email, HttpServletResponse response) throws IOException {
@@ -65,19 +78,5 @@ public class UserController {
         else {
             response.getWriter().write("available");
         }
-    }
-
-    /* RESTful custom authorisation */
-    @RequestMapping(value="/api_login/", method = RequestMethod.POST)
-    @ResponseBody
-    public UserEntity apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
-        UserEntity authUser = userService.getByEmail(email);
-        if(authUser!=null && authUser.getPassword().equals(password)) {
-            return authUser;
-        }
-        else {
-            return new UserEntity();
-        }
-
     }
 }

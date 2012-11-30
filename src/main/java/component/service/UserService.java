@@ -37,6 +37,11 @@ public class UserService  {
     public void addUser(UserEntity user) {
         userDAO.add(user);
     }
+    public void updateUser(UserEntity userEntity, HttpServletRequest request) {
+        userEntity.setPassword(this.stringToSha(userEntity.getPassword()));
+        userDAO.update(userEntity);
+        authenticateUserAndSetSession(userEntity, request);
+    }
 
     public UserEntity getById(Integer uid) {
         return userDAO.getById(uid);
@@ -50,6 +55,18 @@ public class UserService  {
         return userDAO.getAll(new UserEntity());
     }
 
+    /* Returnes UserEntity, when authorizing from REST */
+    public UserEntity getCredentials(String email, String password) {
+        UserEntity authUser = userDAO.getByEmail(email);
+
+        if(authUser!=null && authUser.getPassword().equals(password)) {
+            return authUser;
+        }
+        else {
+            return new UserEntity();
+        }
+    }
+
 
     public boolean checkIfExist(String email) {
         if(userDAO.getByEmail(email)!=null) {
@@ -59,16 +76,14 @@ public class UserService  {
         }
     }
 
-    public UserEntity createNewUserAndAuthenticate(UserEntity user, HttpServletRequest request) {
+    public UserEntity createNewUserAndAuthenticate(UserEntity user, HttpServletRequest request, boolean createSession) {
 
         /* Generate timestamp of registration */
         Timestamp regDate = new Timestamp(new java.util.Date().getTime());
         user.setRegistrationDate(regDate);
 
         /* SHA-1 from plain text password */
-        ShaPasswordEncoder passwordEncoder = new ShaPasswordEncoder();
-        String encodedPwd = passwordEncoder.encodePassword(user.getPassword(), null);
-        user.setPassword(encodedPwd);
+        user.setPassword(this.stringToSha(user.getPassword()));
 
         /* List of authority */
         List<GrantedAuthority> roles = new ArrayList<GrantedAuthority>();
@@ -78,9 +93,10 @@ public class UserService  {
         /* Actual database save */
         this.addUser(user);
 
+        if(createSession) {
         /* Loging user in, and redirecting to user view */
-        authenticateUserAndSetSession(user, request);
-
+            authenticateUserAndSetSession(user, request);
+        }
         return user;
     }
 
@@ -96,4 +112,11 @@ public class UserService  {
 
         SecurityContextHolder.getContext().setAuthentication(authenticatedUser);
     }
+
+    /* SHA-1 from plain text password */
+    private String stringToSha(String password) {
+        return new ShaPasswordEncoder().encodePassword(password, null);
+    }
+
+
 }

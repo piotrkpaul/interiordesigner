@@ -34,6 +34,9 @@
     <definition name="registerPage" extends="loginPage">
         <put-attribute name="content" value="/WEB-INF/views/front/general/register.jsp" />
     </definition>
+    <definition name="editProfilePage" extends="loginPage">
+        <put-attribute name="content" value="/WEB-INF/views/front/general/editProfilePage.jsp" />
+    </definition>
 
     <definition name="userListView" extends="doubleColumnLayout">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
