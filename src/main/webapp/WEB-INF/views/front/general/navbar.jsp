@@ -10,25 +10,37 @@
             </a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Action</a></li>
-                            <li><a href="#">Another action</a></li>
-                            <li><a href="#">Something else here</a></li>
-                            <li class="divider"></li>
-                            <li class="nav-header">Nav header</li>
-                            <li><a href="#">Separated link</a></li>
-                            <li><a href="#">One more separated link</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
+                    <sec:authorize access="isAuthenticated()">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projekt <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Wszystkie projekty</a></li>
+                                <li><a href="#">Twoje projekty</a></li>
+                                <li><a href="#">Nowy projekt</a></li>
+                            </ul>
+                        </li>
+                    </sec:authorize>
+                    <sec:authorize access="isAnonymous()">
+                        <li><a href="${pageContext.request.contextPath}/rejestracja">Rejestracja</a></li>
+                        <li><a href="${pageContext.request.contextPath}/logowanie">Logowanie</a></li>
+                    </sec:authorize>
+                    <li><a href="${pageContext.request.contextPath}/api">Dokumentacja API</a></li>
+                    <li><a href="${pageContext.request.contextPath}/about">O aplikacji</a></li>
                 </ul>
                 <sec:authorize access="isAuthenticated()">
-                    Jesteś zalogowany jako <a href="#"><sec:authentication property="principal.username" /></a>
-                    <a class="btn  pull-right" href="j_spring_security_logout" />Wyloguj</a>
+                    <div class="pull-right navUserInfo">
+                        <div class="btn-group">
+                            <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">
+                                <sec:authentication property="principal.username" />
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="${pageContext.request.contextPath}/moje-konto">Ustawienia</a></li>
+                                <li><a href="j_spring_security_logout">Wyloguj</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </sec:authorize>
                 <sec:authorize access="isAnonymous()">
                     <form method="post" class="signin navbar-form pull-right" action="j_spring_security_check">

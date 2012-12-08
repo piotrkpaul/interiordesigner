@@ -78,16 +78,28 @@ public class ProjectDataEntity {
         this.dateOfLastEdit = dateOfLastEdit;
     }
 
-    private byte[] projectData;
+    private byte[] dataWalls;
 
-    @javax.persistence.Column(name = "projectData")
+    @javax.persistence.Column(name = "dataWalls")
     @Basic
-    public byte[] getProjectData() {
-        return projectData;
+    public byte[] getDataWalls() {
+        return dataWalls;
     }
 
-    public void setProjectData(byte[] projectData) {
-        this.projectData = projectData;
+    public void setDataWalls(byte[] dataWalls) {
+        this.dataWalls = dataWalls;
+    }
+
+    private byte[] dataObjects;
+
+    @javax.persistence.Column(name = "dataObjects")
+    @Basic
+    public byte[] getDataObjects() {
+        return dataObjects;
+    }
+
+    public void setDataObjects(byte[] dataObjects) {
+        this.dataObjects = dataObjects;
     }
 
     @Override
@@ -103,7 +115,8 @@ public class ProjectDataEntity {
         if (dateOfLastEdit != null ? !dateOfLastEdit.equals(that.dateOfLastEdit) : that.dateOfLastEdit != null)
             return false;
         if (ownerId != null ? !ownerId.equals(that.ownerId) : that.ownerId != null) return false;
-        if (!Arrays.equals(projectData, that.projectData)) return false;
+        if (!Arrays.equals(dataWalls, that.dataWalls)) return false;
+        if (!Arrays.equals(dataObjects, that.dataObjects)) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
 
         return true;
@@ -116,7 +129,8 @@ public class ProjectDataEntity {
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (dateOfCreation != null ? dateOfCreation.hashCode() : 0);
         result = 31 * result + (dateOfLastEdit != null ? dateOfLastEdit.hashCode() : 0);
-        result = 31 * result + (projectData != null ? Arrays.hashCode(projectData) : 0);
+        result = 31 * result + (dataWalls != null ? Arrays.hashCode(dataWalls) : 0);
+        result = 31 * result + (dataObjects != null ? Arrays.hashCode(dataObjects) : 0);
         return result;
     }
 }

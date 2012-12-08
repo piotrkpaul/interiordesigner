@@ -2,13 +2,28 @@
 
 
 <!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
-    <h1>Interior Designer!</h1>
+<div id="homeSlider" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="item active homeSlide homeSlide_1">
 
-    <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero
-        unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        </div>
+        <div class="item homeSlide homeSlide_2">
 
-    <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        </div>
+        <div class="item homeSlide homeSlide_3">
+
+        </div>
+    </div>
+    <a class="carousel-control left" href="#homeSlider" data-slide="prev">&lsaquo;</a>
+    <a class="carousel-control right" href="#homeSlider" data-slide="next">&rsaquo;</a>
+    <div id="sliderContent">
+        <h1>Interior Designer!</h1>
+
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero
+            unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+
+        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+    </div>
 </div>
 
 <!-- Example row of columns -->

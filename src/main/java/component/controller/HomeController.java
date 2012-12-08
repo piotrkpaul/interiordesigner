@@ -34,7 +34,7 @@ public class HomeController {
     public String showHomePage(Map<String, Object> model) {
         return "homeScreen";
     }
-
+    @PreAuthorize("isAnonymous()")
     @RequestMapping({"/logowanie"})
     public String showLoginPage(Map<String, Object> model) {
         return "loginPage";
@@ -46,13 +46,13 @@ public class HomeController {
     public UserEntity apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
         return userService.getCredentials(email, password);
     }
-
+    @PreAuthorize("isAnonymous()")
     @RequestMapping(value = "/rejestracja", method = RequestMethod.GET)
     public String showRegisterPage(Model model) {
         model.addAttribute("userEntity", new UserEntity());
         return "registerPage";
     }
-
+    @PreAuthorize("isAnonymous()")
     @RequestMapping(value = "/rejestracja", method = RequestMethod.POST)
     public String formHandler(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) {
         if(bindingResult.hasErrors()) {
