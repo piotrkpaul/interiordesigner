@@ -6,4 +6,8 @@ function ajaxCheckIfAvailable(){var e=$("#user_email").val();var t=$.ajax({url:"
 
 $('#homeSlider').carousel({
     interval: 2000
-})
+});
+
+$(function() {
+    $('#accordion').accordion();
+});

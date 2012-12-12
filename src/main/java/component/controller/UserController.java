@@ -40,16 +40,13 @@ public class UserController {
     public String listUsers(Map<String, Object> model) {
 
         model.put("userList", userService.getAllUsers());
-
         return "userListView";
-
     }
 
     @RequestMapping(value = "/{uid}", method= RequestMethod.GET, produces="text/html")
     public String getUserById(@PathVariable Integer uid, Map<String, Object> model) {
 
         model.put("userEntity", userService.getById(uid));
-
         return "showUserProfile";
     }
 

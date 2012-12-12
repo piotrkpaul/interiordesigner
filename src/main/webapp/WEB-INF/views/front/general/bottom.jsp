@@ -16,7 +16,5 @@
     </div>
 </footer>
 
-        <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
-        <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
-    </body>
+      </body>
 </html>

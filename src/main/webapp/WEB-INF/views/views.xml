@@ -20,6 +20,14 @@
         <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
     </definition>
 
+    <definition name="projectCreator" template="/WEB-INF/views/front/templates/projectCreator.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="navbar" value="/WEB-INF/views/front/general/navbar.jsp" />
+        <put-attribute name="intro" value="/WEB-INF/views/front/general/intro.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
+    </definition>
+
     <definition name="loginPage" template="/WEB-INF/views/front/templates/loginPage.jsp">
         <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
         <put-attribute name="content" value="/WEB-INF/views/front/general/login.jsp" />
@@ -36,6 +44,9 @@
     </definition>
     <definition name="editProfilePage" extends="loginPage">
         <put-attribute name="content" value="/WEB-INF/views/front/general/editProfilePage.jsp" />
+    </definition>
+    <definition name="errorPage" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/general/errorPage.jsp" />
     </definition>
 
     <definition name="userListView" extends="doubleColumnLayout">
@@ -54,5 +65,20 @@
         <put-attribute name="content" value="/WEB-INF/views/front/pages/catalog/itemView.jsp" />
         <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/catalog/catalogItemViewSidebar.jsp" />
     </definition>
+
+    <definition name="projectList" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectList.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/project/projectListSidebar.jsp" />
+    </definition>
+
+    <definition name="projectErrorPage" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectErrorPage.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/project/projectListSidebar.jsp" />
+    </definition>
+
+    <definition name="projectCreatorPage" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectCreator.jsp" />
+    </definition>
+
 
 </tiles-definitions>

@@ -17,6 +17,8 @@ import java.util.Arrays;
 @javax.persistence.Table(name = "projectData", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
 public class ProjectDataEntity {
+
+    @GeneratedValue
     private int id;
 
     @javax.persistence.Column(name = "id")
@@ -52,6 +54,18 @@ public class ProjectDataEntity {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    private String projectDescription;
+
+    @javax.persistence.Column(name = "projectDescription")
+    @Basic
+    public String getProjectDescription() {
+        return projectDescription;
+    }
+
+    public void setProjectDescription(String projectDescription) {
+        this.projectDescription = projectDescription;
     }
 
     private Timestamp dateOfCreation;
@@ -118,6 +132,7 @@ public class ProjectDataEntity {
         if (!Arrays.equals(dataWalls, that.dataWalls)) return false;
         if (!Arrays.equals(dataObjects, that.dataObjects)) return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
+        if (projectDescription != null ? !projectDescription.equals(that.projectDescription) : that.projectDescription != null) return false;
 
         return true;
     }
@@ -127,6 +142,7 @@ public class ProjectDataEntity {
         int result = id;
         result = 31 * result + (ownerId != null ? ownerId.hashCode() : 0);
         result = 31 * result + (title != null ? title.hashCode() : 0);
+        result = 31 * result + (projectDescription != null ? projectDescription.hashCode() : 0);
         result = 31 * result + (dateOfCreation != null ? dateOfCreation.hashCode() : 0);
         result = 31 * result + (dateOfLastEdit != null ? dateOfLastEdit.hashCode() : 0);
         result = 31 * result + (dataWalls != null ? Arrays.hashCode(dataWalls) : 0);

@@ -54,7 +54,7 @@ body > .navbar .brand:hover {
 
 /* padding for in-page bookmarks and fixed navbar */
 section {
-  padding-top: 30px;
+  padding-top: 5px;
 }
 section > .page-header,
 section > .lead {
@@ -389,9 +389,6 @@ hr.soften {
 /* Download page
 -------------------------------------------------- */
 
-.download .page-header {
-  margin-top: 36px;
-}
 .page-header .toggle-all {
   margin-top: 5px;
 }
@@ -817,17 +814,6 @@ form.bs-docs-example {
 
 /* Desktop large
 ------------------------- */
-@media (min-width: 1200px) {
-  .bs-docs-container {
-    max-width: 970px;
-  }
-  .bs-docs-sidenav {
-    width: 258px;
-  }
-  .bs-docs-sidenav > li > a {
-    width: 230px \9; /* Override the previous IE8-9 hack */
-  }
-}
 
 /* Desktop
 ------------------------- */

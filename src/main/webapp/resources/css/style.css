@@ -2,7 +2,10 @@
     list-style-type: none;
 }
 .furnitureItemList li {
-    float: left; margin-left: 10px; margin-bottom: 10px; width: 280px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 220px;
 }
 .furnitureItemList li:hover {
     outline: 1px solid #DDD; border-radius: 4px;
@@ -11,17 +14,33 @@
     line-height: 1.1;
 }
 .furnitureItemList .thumbnail {
-    height: 450px;
+    height: 400px;
     position: relative;
 }
 .furnitureItemList .caption {
     bottom: 0;
     position: absolute;
 }
-.thumbnail .imageDetailView {
-    float: left; margin: 0;
+.itemView .page-header, .furnitureItemView  {
+    float: left;
+    width: 100%;
 }
-.thumbnail .captionDetailView {
+.itemView .page-header h1 {
+    float: left;
+}
+.itemView .page-header a {
+    margin-top: 17px;
+    float: right;
+}
+.furnitureItemView .imageDetailView {
+    float: right; margin: 0 0 30px 30px;
+    height: 35%;
+    width: 35%;
+}
+.furnitureItemView blockquote {
+    margin-top: 30px;
+}
+.furnitureItemView .captionDetailView {
     float: left; margin-left:50px;
 }
 /*
@@ -109,4 +128,12 @@
 }
 .homeSlide_3 {
     background: url(../img/data/home-slider/slide-3.jpg) no-repeat center center;
+}
+
+/*
+    Project Creator
+*/
+
+.projectCreator {
+    margin-top: 30px;
 }

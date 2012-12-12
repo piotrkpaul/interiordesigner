@@ -8,6 +8,9 @@ import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.security.Principal;
+import java.sql.Array;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Service("projectService")
@@ -18,7 +21,17 @@ public class ProjectService {
     public ProjectDAO projectDAO;
 
     @Secured("ROLE_USER")
-    public void createProject(ProjectDataEntity projectEntity) {
+    public void createProject(ProjectDataEntity projectEntity, Principal principal) {
+
+        byte[] Data = new byte[0];
+
+        Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
+        projectEntity.setDateOfCreation(dateOFCreation);
+        projectEntity.setDateOfLastEdit(dateOFCreation);
+        projectEntity.setOwnerId(principal.getName());
+        projectEntity.setDataObjects(Data);
+        projectEntity.setDataWalls(Data);
+
         projectDAO.add(projectEntity);
     }
 

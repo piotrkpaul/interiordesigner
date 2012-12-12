@@ -9,6 +9,6 @@
     <li><a href="#chairs"><i class="icon-chevron-right"></i> 5. Krzesła</a></li>
     <li><a href="#dressers"><i class="icon-chevron-right"></i> 6. Komody </a></li>
     <li><a href="#tables"><i class="icon-chevron-right"></i> 7. Stoły </a></li>
-    <li><a href="#agd"><i class="icon-chevron-right"></i> 8.AGD </a></li>
+    <li><a href="#agd"><i class="icon-chevron-right"></i> 8. AGD </a></li>
 </ul>
 

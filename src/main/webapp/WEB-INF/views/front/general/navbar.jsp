@@ -11,16 +11,16 @@
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="active"><a href="${pageContext.request.contextPath}/">Home</a></li>
-                    <sec:authorize access="isAuthenticated()">
                         <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projekt <b class="caret"></b></a>
+                            <a href="${pageContext.request.contextPath}/project" class="dropdown-toggle" data-toggle="dropdown">Projekt <b class="caret"></b></a>
                             <ul class="dropdown-menu">
-                                <li><a href="#">Wszystkie projekty</a></li>
-                                <li><a href="#">Twoje projekty</a></li>
-                                <li><a href="#">Nowy projekt</a></li>
+                                <li><a href="${pageContext.request.contextPath}/project">Wszystkie projekty</a></li>
+                                <sec:authorize access="isAuthenticated()">
+                                    <li><a href="${pageContext.request.contextPath}/project/user">Twoje projekty</a></li>
+                                    <li><a href="${pageContext.request.contextPath}/project/create">Nowy projekt</a></li>
+                                </sec:authorize>
                             </ul>
                         </li>
-                    </sec:authorize>
                     <sec:authorize access="isAnonymous()">
                         <li><a href="${pageContext.request.contextPath}/rejestracja">Rejestracja</a></li>
                         <li><a href="${pageContext.request.contextPath}/logowanie">Logowanie</a></li>
@@ -37,13 +37,13 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a href="${pageContext.request.contextPath}/moje-konto">Ustawienia</a></li>
-                                <li><a href="j_spring_security_logout">Wyloguj</a></li>
+                                <li><a href="${pageContext.request.contextPath}/j_spring_security_logout">Wyloguj</a></li>
                             </ul>
                         </div>
                     </div>
                 </sec:authorize>
                 <sec:authorize access="isAnonymous()">
-                    <form method="post" class="signin navbar-form pull-right" action="j_spring_security_check">
+                    <form method="post" class="signin navbar-form pull-right" action="${pageContext.request.contextPath}/j_spring_security_check">
                         <input id="email" name="j_username" type="email" class="span2" placeholder="Email" />
                         <input id="password" name="j_password" type="password" class="span2" placeholder="Hasło" />
                         <input name="commit" class="btn" type="submit" value="Zaloguj" />
