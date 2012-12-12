@@ -9,7 +9,7 @@
         </h1>
     </div>
     <div class="row download-builder">
-        <ul class="furniturefurnitureItemList">
+        <ul class="furnitureItemList">
             <c:forEach var="item" items="${wardrobes}">
                 <li class="span4">
                     <div class="thumbnail">
