@@ -48,7 +48,7 @@ public class FurnitureController {
         }
         else {
             model.put("error", "Nie odnaleziono w bazie danych mebla o podanym id.");
-            return "errorPage";
+            return "redirect:/catalog";
         }
 
     }
@@ -56,9 +56,15 @@ public class FurnitureController {
     @PreAuthorize(("hasRole('ROLE_ADMIN')"))
     @RequestMapping(value = "/delete/{itemId}", method = RequestMethod.GET)
     public String deleteItem(@PathVariable String itemId, Map<String, Object> model) {
-        furnitureService.removeItem(itemId);
-
-        return "redirect:/catalog";
+        if(furnitureService.getById(itemId)!=null) {
+            furnitureService.removeItem(itemId);
+            model.put("info", "Mebel o ID" + itemId + " zostal pomyslnie usuniety z bazy danych.");
+            return "redirect:/catalog";
+        }
+        else {
+            model.put("error", "Nie odnaleziono w bazie danych mebla o podanym id.");
+            return "redirect:/catalog";
+        }
     }
 
 }
