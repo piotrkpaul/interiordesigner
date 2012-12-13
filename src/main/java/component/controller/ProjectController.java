@@ -9,6 +9,7 @@ import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -69,16 +70,23 @@ public class ProjectController {
     public String showCurrentUserProjects(Map<String, Object> model, Principal principal) {
 
         model.put("projectList", projectService.getProjectsByUser(principal.getName()));
+        if(principal!=null) {
+            String userName = principal.getName();
+            model.put("principal", userName);
+        }
         model.put("pageHeading", "Twoje projekty");
         model.put("pageLead", "Projekty stworzone przez Ciebie w naszym systemie");
         return "projectList";
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces="text/html")
-    public String showUserProjects(@RequestParam("id") int id, Map<String, Object> model, Principal principal) {
+    public String showUserProjects(@PathVariable Integer id, Map<String, Object> model, Principal principal) {
 
         UserEntity user = userService.getById(id);
-        model.put("principal", principal.getName());
+        if(principal!=null) {
+            String userName = principal.getName();
+            model.put("principal", userName);
+        }
         model.put("projectList", projectService.getProjectsByUser(user.getEmail()));
         return "projectList";
     }
@@ -100,7 +108,28 @@ public class ProjectController {
         }
         else {
             projectService.createProject(projectDataEntity, principal);
-            return "redirect:/user/" + projectDataEntity.getId();
+            return "redirect:/project/user" + projectDataEntity.getId();
+        }
+    }
+
+    @PreAuthorize("hasRole('ROLE_USER')")
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET, produces="text/html")
+    public String deleteProject(@PathVariable Integer id, Model model, Principal principal) {
+        ProjectDataEntity project = projectService.getProject(id);
+        if(project!=null) {
+            if(principal.getName().equals(project.getOwnerId())){
+                projectService.deleteProject(project);
+                model.addAttribute("info", "Projekt zostal pomyslnie skasowany z bazy danych.");
+                return "redirect:/project";
+            }
+            else {
+                model.addAttribute("error", "Nie mozesz skasowac projektu, ktory nie nalezy do Ciebie!");
+                return "redirect:/project";
+            }
+        }
+        else {
+            model.addAttribute("info", "Projekt nie istnieje.");
+            return "redirect:/project";
         }
     }
 }

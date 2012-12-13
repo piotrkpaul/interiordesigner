@@ -5,7 +5,7 @@
 
 <sf:form method="post" class="form-projectData" commandName="projectDataEntity">
     <sf:errors path="title" cssClass="alert alert-error" element="div" />
-    <sf:input path="title" min="3" maxlength="15" id="project_title" class="input-block-level" placeholder="Tytuł"/>
+    <sf:input path="title" min="3" maxlength="120" id="project_title" class="input-block-level" placeholder="Tytuł"/>
 
     <sf:textarea path="projectDescription" min="1" max="4000" id="project_description" class="" placeholder="Opisz swój projekt" />
 
