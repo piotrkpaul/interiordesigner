@@ -13,6 +13,8 @@
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
 
+    <script src="${pageContext.request.contextPath}/resources/js/creator.js"></script>
+
 
     <link href="${pageContext.request.contextPath}/resources/css/bootstrap.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/resources/css/docs.css" rel="stylesheet">

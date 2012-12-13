@@ -31,11 +31,15 @@ public class ProjectController {
 
 
     @RequestMapping(method = RequestMethod.GET, produces="text/html")
-    public String showProjectList(Map<String, Object> model) {
+    public String showProjectList(Map<String, Object> model, Principal principal) {
 
         List<ProjectDataEntity> projectList = projectService.getAllProjects();
         if(projectList!=null) {
             model.put("projectList", projectList);
+            if(principal!=null) {
+                String userName = principal.getName();
+                model.put("principal", userName);
+            }
             model.put("pageHeading", "Katalog projektów");
             model.put("pageLead", "Lista projektów wszystkich użytkowników");
             return "projectList";
@@ -71,9 +75,10 @@ public class ProjectController {
     }
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces="text/html")
-    public String showUserProjects(@RequestParam("id") int id, Map<String, Object> model) {
+    public String showUserProjects(@RequestParam("id") int id, Map<String, Object> model, Principal principal) {
 
         UserEntity user = userService.getById(id);
+        model.put("principal", principal.getName());
         model.put("projectList", projectService.getProjectsByUser(user.getEmail()));
         return "projectList";
     }

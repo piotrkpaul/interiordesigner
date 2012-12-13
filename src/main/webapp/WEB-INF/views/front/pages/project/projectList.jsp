@@ -13,14 +13,17 @@
             <h3>${p.title}</h3>
             <div>
                 <p>
-                    ${p.projectDescription}
-                    <a class="btn btn-primary" href="${pageContext.request.contextPath}/project/${p.id}">Otwórz</a>
-                    <c:choose>
-                        <c:when test="${pageContext['request'].userPrincipal} == ${p.ownerId}">
-                            <a class="btn btn-success" href="${pageContext.request.contextPath}/project/edit/${p.id}">Edytuj</a>
-                            <a class="btn btn-danger" href="${pageContext.request.contextPath}/project/delete/${p.id}">Usuń</a>
-                        </c:when>
-                    </c:choose>
+                    <div class="projectDesc">
+                        ${p.projectDescription}
+                    </div>
+                    <div class="btn-group">
+                        <a class="btn btn-small btn-primary" href="${pageContext.request.contextPath}/project/${p.id}">Otwórz</a>
+                        <c:if test="${principal == p.ownerId}">
+                            <a class="btn btn-small btn-success" href="${pageContext.request.contextPath}/project/edit/${p.id}">Edytuj</a>
+                            <a class="btn btn-small btn-danger" href="${pageContext.request.contextPath}/project/delete/${p.id}">Usuń</a>
+                        </c:if>
+                     </div>
+
                 </p>
             </div>
         </c:forEach>

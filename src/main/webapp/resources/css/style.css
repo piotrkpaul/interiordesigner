@@ -129,6 +129,25 @@
 .homeSlide_3 {
     background: url(../img/data/home-slider/slide-3.jpg) no-repeat center center;
 }
+/*
+    Project List
+*/
+section #accordion h3, section #accordion .ui-accordion-content {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    color: #08C;
+    padding: 5px 0 5px 15px;
+}
+section #accordion .ui-accordion-content {
+    color: #636161;
+}
+section #accordion .ui-accordion-content .btn-group {
+    margin-top: 4px;
+}
+section #accordion .ui-accordion-content .btn-group .btn {
+    margin-right: 4px;
+}
 
 /*
     Project Creator
@@ -137,3 +156,38 @@
 .projectCreator {
     margin-top: 30px;
 }
+.projectCreator textarea {
+    width: 927px;
+}
+.projectCreator .form-actions {
+    float: left; width: 900px;
+}
+
+#projectData {
+    width: 759px;
+    height: 360px;
+    background: url("../img/grid.png") top left;
+    border-left:1px solid #939393;
+    border-bottom: 1px solid #939393;
+    float: left;
+    position: relative;
+}
+#objectList {
+    float: left;
+    width: 180px;
+    height: 360px;
+    background: #cdcdcd;
+}
+
+#objectList .item {
+    width: 30px; height: 30px;
+    background: red;
+}
+
+.furniture {
+    width: 30px;
+    outline: 1px dashed #000;
+    height: 30px;
+    background: yellow;
+}
+
