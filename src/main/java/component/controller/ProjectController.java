@@ -1,5 +1,6 @@
 package component.controller;
 
+import component.service.FurnitureService;
 import component.service.ProjectService;
 import component.service.UserService;
 import entity.ProjectDataEntity;
@@ -29,6 +30,9 @@ public class ProjectController {
 
     @Autowired
     public UserService userService;
+
+    @Autowired
+    public FurnitureService furnitureService;
 
 
     @RequestMapping(method = RequestMethod.GET, produces="text/html")
@@ -96,6 +100,7 @@ public class ProjectController {
     public String createProject(Model model) {
         model.addAttribute("pageHeading", "Kreator projektu");
         model.addAttribute("pageLead", "Stwórz projekt swojego mieszkania");
+        model.addAttribute("furnitureList", furnitureService.getByCategory("beds"));
         model.addAttribute("projectDataEntity", new ProjectDataEntity());
         return "projectCreatorPage";
     }

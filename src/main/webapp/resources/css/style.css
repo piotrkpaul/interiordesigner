@@ -152,7 +152,12 @@ section #accordion .ui-accordion-content .btn-group .btn {
 /*
     Project Creator
 */
-
+[draggable] {
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
 .projectCreator {
     margin-top: 30px;
 }
@@ -177,11 +182,22 @@ section #accordion .ui-accordion-content .btn-group .btn {
     width: 180px;
     height: 360px;
     background: #cdcdcd;
+    overflow-y: scroll;
+}
+#objectList ul {
+    list-style-type: none;
+    margin: 0; padding: 0;
+}
+#objectList ul li {
+    float: left;
+}
+#objectList .furnitureItem {
+    width: 165px; cursor: move;
+    border-bottom: 1px solid #000;
 }
 
-#objectList .item {
-    width: 30px; height: 30px;
-    background: red;
+#objectList .furnitureItem .height, #objectList .furnitureItem .width {
+    display: none;
 }
 
 .furniture {

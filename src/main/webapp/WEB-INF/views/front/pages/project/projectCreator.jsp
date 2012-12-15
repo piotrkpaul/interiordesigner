@@ -13,7 +13,16 @@
         <div id="projectData">
         </div>
         <div id="objectList">
-            <div id="bed-item" class="item"></div>
+            <ul>
+            <c:forEach var="f" items="${furnitureList}">
+                <li>
+                    <div class="furnitureItem">
+                        <div class="name"><b>${f.itemName}</b></div>
+                        <div class="width">${f.sizeX}</div>
+                        <div class="height">${f.sizeY}</div>
+                    </div>
+                </li>
+            </c:forEach>
         </div>
     </div>
 
