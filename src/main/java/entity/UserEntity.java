@@ -3,10 +3,7 @@ package entity;
 import org.hibernate.validator.constraints.Email;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
@@ -20,7 +17,7 @@ import java.sql.Timestamp;
  * Time: 12:35
  * To change this template use File | Settings | File Templates.
  */
-@javax.persistence.Table(name = "user", schema = "", catalog = "68_cmsSpringDatabase")
+@Table(name = "user", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
 public class UserEntity implements Serializable {
 
@@ -29,7 +26,7 @@ public class UserEntity implements Serializable {
     @GeneratedValue
     private int id;
 
-    @javax.persistence.Column(name = "id")
+    @Column(name = "id")
     @Id
     @GeneratedValue
     public int getId() {
@@ -43,7 +40,7 @@ public class UserEntity implements Serializable {
     @Pattern(regexp = "^[a-zA-Z]+$", message = "Imię może zawierać tylko litery.")
     private String name;
 
-    @javax.persistence.Column(name = "name")
+    @Column(name = "name")
     @Basic
     public String getName() {
         return name;
@@ -57,7 +54,7 @@ public class UserEntity implements Serializable {
     @Pattern(regexp = "^[a-zA-Z]+$", message = "Nazwisko może zawierać tylko litery.")
     private String surname;
 
-    @javax.persistence.Column(name = "surname")
+    @Column(name = "surname")
     @Basic
     public String getSurname() {
         return surname;
@@ -71,7 +68,7 @@ public class UserEntity implements Serializable {
     @Size (min=5, max=64, message = "Hasło nie może być krótsze, niż 6 znaków.")
     private String password;
 
-    @javax.persistence.Column(name = "password")
+    @Column(name = "password")
     @Basic
     public String getPassword() {
         return password;
@@ -83,7 +80,7 @@ public class UserEntity implements Serializable {
 
     private Timestamp registrationDate;
 
-    @javax.persistence.Column(name = "registrationDate")
+    @Column(name = "registrationDate")
     @Basic
     public Timestamp getRegistrationDate() {
         return registrationDate;
@@ -96,7 +93,7 @@ public class UserEntity implements Serializable {
     @Email (message = "Podano błędny adres email.")
     private String email;
 
-    @javax.persistence.Column(name = "email")
+    @Column(name = "email")
     @Basic
     public String getEmail() {
         return email;
@@ -108,7 +105,7 @@ public class UserEntity implements Serializable {
 
     private String role;
 
-    @javax.persistence.Column(name = "role")
+    @Column(name = "role")
     @Basic
     public String getRole() {
         return role;

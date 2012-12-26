@@ -1,15 +1,12 @@
 package component.service;
 
 import component.dao.hibernate.ProjectDAO;
-import component.dao.hibernate.UserDAO;
 import entity.ProjectDataEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.security.Principal;
-import java.sql.Array;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -21,16 +18,11 @@ public class ProjectService {
     public ProjectDAO projectDAO;
 
     @Secured("ROLE_USER")
-    public void createProject(ProjectDataEntity projectEntity, Principal principal) {
-
-        byte[] Data = new byte[0];
+    public void createProject(ProjectDataEntity projectEntity) {
 
         Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
         projectEntity.setDateOfCreation(dateOFCreation);
         projectEntity.setDateOfLastEdit(dateOFCreation);
-        projectEntity.setOwnerId(principal.getName());
-        projectEntity.setDataObjects(Data);
-        projectEntity.setDataWalls(Data);
 
         projectDAO.add(projectEntity);
     }
@@ -58,6 +50,16 @@ public class ProjectService {
         return projectDAO.getAll();
     }
 
+    /* Api Methods */
+    public List<ProjectDataEntity> apiGetProjectListByUser(String userId) {
+        return projectDAO.getAllByUser(userId);
+    }
 
 
+    public void apiUpdateProject(ProjectDataEntity projectData) {
+        Timestamp dateOFEdit = new Timestamp(new java.util.Date().getTime());
+
+        projectData.setDateOfLastEdit(dateOFEdit);
+        projectDAO.update(projectData);
+    }
 }

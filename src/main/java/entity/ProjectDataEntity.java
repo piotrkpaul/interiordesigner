@@ -1,29 +1,20 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.Arrays;
 
 /**
- * Created with IntelliJ IDEA.
- * User: piotrekpaul
- * Date: 17.11.2012
- * Time: 12:35
- * To change this template use File | Settings | File Templates.
+ * Date: 25.12.2012
+ * Time: 22:37
  */
-@javax.persistence.Table(name = "projectData", schema = "", catalog = "68_cmsSpringDatabase")
+@Table(name = "projectData", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
 public class ProjectDataEntity {
-
-    @GeneratedValue
     private int id;
 
-    @javax.persistence.Column(name = "id")
+    @Column(name = "id")
     @Id
-    @GeneratedValue
     public int getId() {
         return id;
     }
@@ -34,7 +25,7 @@ public class ProjectDataEntity {
 
     private String ownerId;
 
-    @javax.persistence.Column(name = "ownerId")
+    @Column(name = "ownerId")
     @Basic
     public String getOwnerId() {
         return ownerId;
@@ -46,7 +37,7 @@ public class ProjectDataEntity {
 
     private String title;
 
-    @javax.persistence.Column(name = "title")
+    @Column(name = "title")
     @Basic
     public String getTitle() {
         return title;
@@ -58,7 +49,7 @@ public class ProjectDataEntity {
 
     private String projectDescription;
 
-    @javax.persistence.Column(name = "projectDescription")
+    @Column(name = "projectDescription")
     @Basic
     public String getProjectDescription() {
         return projectDescription;
@@ -70,7 +61,7 @@ public class ProjectDataEntity {
 
     private Timestamp dateOfCreation;
 
-    @javax.persistence.Column(name = "dateOfCreation")
+    @Column(name = "dateOfCreation")
     @Basic
     public Timestamp getDateOfCreation() {
         return dateOfCreation;
@@ -82,7 +73,7 @@ public class ProjectDataEntity {
 
     private Timestamp dateOfLastEdit;
 
-    @javax.persistence.Column(name = "dateOfLastEdit")
+    @Column(name = "dateOfLastEdit")
     @Basic
     public Timestamp getDateOfLastEdit() {
         return dateOfLastEdit;
@@ -92,27 +83,28 @@ public class ProjectDataEntity {
         this.dateOfLastEdit = dateOfLastEdit;
     }
 
-    private byte[] dataWalls;
+    private String dataWalls;
 
-    @javax.persistence.Column(name = "dataWalls")
+    @Column(name = "dataWalls")
     @Basic
-    public byte[] getDataWalls() {
+    public String getDataWalls() {
         return dataWalls;
     }
 
-    public void setDataWalls(byte[] dataWalls) {
+    public void setDataWalls(String dataWalls) {
         this.dataWalls = dataWalls;
     }
 
-    private byte[] dataObjects;
 
-    @javax.persistence.Column(name = "dataObjects")
+    private String dataObjects;
+
+    @Column(name = "dataObjects")
     @Basic
-    public byte[] getDataObjects() {
+    public String getDataObjects() {
         return dataObjects;
     }
 
-    public void setDataObjects(byte[] dataObjects) {
+    public void setDataObjects(String dataObjects) {
         this.dataObjects = dataObjects;
     }
 
@@ -129,10 +121,11 @@ public class ProjectDataEntity {
         if (dateOfLastEdit != null ? !dateOfLastEdit.equals(that.dateOfLastEdit) : that.dateOfLastEdit != null)
             return false;
         if (ownerId != null ? !ownerId.equals(that.ownerId) : that.ownerId != null) return false;
-        if (!Arrays.equals(dataWalls, that.dataWalls)) return false;
-        if (!Arrays.equals(dataObjects, that.dataObjects)) return false;
+        if (dataObjects != null ? !dataObjects.equals(that.dataObjects) : that.dataObjects != null) return false;
+        if (dataWalls != null ? !dataWalls.equals(that.dataWalls) : that.dataWalls != null) return false;
+        if (projectDescription != null ? !projectDescription.equals(that.projectDescription) : that.projectDescription != null)
+            return false;
         if (title != null ? !title.equals(that.title) : that.title != null) return false;
-        if (projectDescription != null ? !projectDescription.equals(that.projectDescription) : that.projectDescription != null) return false;
 
         return true;
     }
@@ -145,8 +138,8 @@ public class ProjectDataEntity {
         result = 31 * result + (projectDescription != null ? projectDescription.hashCode() : 0);
         result = 31 * result + (dateOfCreation != null ? dateOfCreation.hashCode() : 0);
         result = 31 * result + (dateOfLastEdit != null ? dateOfLastEdit.hashCode() : 0);
-        result = 31 * result + (dataWalls != null ? Arrays.hashCode(dataWalls) : 0);
-        result = 31 * result + (dataObjects != null ? Arrays.hashCode(dataObjects) : 0);
+        result = 31 * result + (dataWalls != null ? dataWalls.hashCode() : 0);
+        result = 31 * result + (dataObjects != null ? dataObjects.hashCode() : 0);
         return result;
     }
 }

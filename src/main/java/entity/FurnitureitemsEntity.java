@@ -4,9 +4,7 @@ import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
 import org.springframework.security.crypto.codec.Base64;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Arrays;
 
 /**
@@ -16,13 +14,13 @@ import java.util.Arrays;
  * Time: 12:35
  * To change this template use File | Settings | File Templates.
  */
-@javax.persistence.Table(name = "furnitureitems", schema = "", catalog = "68_cmsSpringDatabase")
+@Table(name = "furnitureitems", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
 @Cache(usage= CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 public class FurnitureitemsEntity {
     private String id;
 
-    @javax.persistence.Column(name = "id")
+    @Column(name = "id")
     @Id
     public String getId() {
         return id;
@@ -34,7 +32,7 @@ public class FurnitureitemsEntity {
 
     private String itemName;
 
-    @javax.persistence.Column(name = "itemName")
+    @Column(name = "itemName")
     @Basic
     public String getItemName() {
         return itemName;
@@ -46,7 +44,7 @@ public class FurnitureitemsEntity {
 
     private String itemCategory;
 
-    @javax.persistence.Column(name = "itemCategory")
+    @Column(name = "itemCategory")
     @Basic
     public String getItemCategory() {
         return itemCategory;
@@ -58,7 +56,7 @@ public class FurnitureitemsEntity {
 
     private String typeOfRoom;
 
-    @javax.persistence.Column(name = "typeOfRoom")
+    @Column(name = "typeOfRoom")
     @Basic
     public String getTypeOfRoom() {
         return typeOfRoom;
@@ -70,7 +68,7 @@ public class FurnitureitemsEntity {
 
     private String itemDescription;
 
-    @javax.persistence.Column(name = "itemDescription")
+    @Column(name = "itemDescription")
     @Basic
     public String getItemDescription() {
         return itemDescription;
@@ -82,7 +80,7 @@ public class FurnitureitemsEntity {
 
     private String itemImageUrl;
 
-    @javax.persistence.Column(name = "itemImageUrl")
+    @Column(name = "itemImageUrl")
     @Basic
     public String getItemImageUrl() {
         return itemImageUrl;
@@ -94,7 +92,7 @@ public class FurnitureitemsEntity {
 
     private double itemPrice;
 
-    @javax.persistence.Column(name = "itemPrice")
+    @Column(name = "itemPrice")
     @Basic
     public double getItemPrice() {
         return itemPrice;
@@ -106,7 +104,7 @@ public class FurnitureitemsEntity {
 
     private int sizeX;
 
-    @javax.persistence.Column(name = "sizeX")
+    @Column(name = "sizeX")
     @Basic
     public int getSizeX() {
         return sizeX;
@@ -118,7 +116,7 @@ public class FurnitureitemsEntity {
 
     private int sizeY;
 
-    @javax.persistence.Column(name = "sizeY")
+    @Column(name = "sizeY")
     @Basic
     public int getSizeY() {
         return sizeY;
@@ -130,7 +128,7 @@ public class FurnitureitemsEntity {
 
     private int sizeZ;
 
-    @javax.persistence.Column(name = "sizeZ")
+    @Column(name = "sizeZ")
     @Basic
     public int getSizeZ() {
         return sizeZ;

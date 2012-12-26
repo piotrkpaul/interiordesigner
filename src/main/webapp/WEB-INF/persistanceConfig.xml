@@ -26,8 +26,7 @@
                 <prop key="hibernate.cache.use_second_level_cache">true</prop>
                 <prop key="hibernate.cache.use_query_cache">true</prop>
                 <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
-                <prop key="hibernate.connection.url">
-                    <![CDATA[jdbc:mysql://plyr.pl:3306/68_cmsSpringDatabase?useUnicode=yes&amp;characterEncoding=UTF-8]]></prop>
+                <prop key="hibernate.connection.url"><![CDATA[jdbc:mysql://plyr.pl:3306/68_cmsSpringDatabase?useUnicode=yes&characterEncoding=UTF-8]]></prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
                 <prop key="hibernate.connection.username">68_databaseRoot</prop>
                 <prop key="hibernate.connection.password">password</prop>

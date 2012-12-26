@@ -56,6 +56,7 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public @ResponseBody UserEntity apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException {
         if(bindingResult.hasErrors()) {
+            System.out.println(bindingResult.getSuppressedFields());
             throw new BindException(bindingResult);
         }
         else {

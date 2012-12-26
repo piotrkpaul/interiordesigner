@@ -1,8 +1,6 @@
 package entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.sql.Timestamp;
 
 /**
@@ -12,12 +10,12 @@ import java.sql.Timestamp;
  * Time: 12:35
  * To change this template use File | Settings | File Templates.
  */
-@javax.persistence.Table(name = "articleContents", schema = "", catalog = "68_cmsSpringDatabase")
+@Table(name = "articleContents", schema = "", catalog = "68_cmsSpringDatabase")
 @Entity
 public class ArticleContentsEntity {
     private String hashName;
 
-    @javax.persistence.Column(name = "hashName")
+    @Column(name = "hashName")
     @Id
     public String getHashName() {
         return hashName;
@@ -29,7 +27,7 @@ public class ArticleContentsEntity {
 
     private String title;
 
-    @javax.persistence.Column(name = "title")
+    @Column(name = "title")
     @Basic
     public String getTitle() {
         return title;
@@ -41,7 +39,7 @@ public class ArticleContentsEntity {
 
     private String content;
 
-    @javax.persistence.Column(name = "content")
+    @Column(name = "content")
     @Basic
     public String getContent() {
         return content;
@@ -53,7 +51,7 @@ public class ArticleContentsEntity {
 
     private Timestamp dateOfCreation;
 
-    @javax.persistence.Column(name = "dateOfCreation")
+    @Column(name = "dateOfCreation")
     @Basic
     public Timestamp getDateOfCreation() {
         return dateOfCreation;
@@ -65,7 +63,7 @@ public class ArticleContentsEntity {
 
     private Timestamp dateOfLastEdit;
 
-    @javax.persistence.Column(name = "dateOfLastEdit")
+    @Column(name = "dateOfLastEdit")
     @Basic
     public Timestamp getDateOfLastEdit() {
         return dateOfLastEdit;
