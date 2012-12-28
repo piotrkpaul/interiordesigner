@@ -13,6 +13,12 @@
     border-radius: 4px;
     padding: 10px;
 }
+.json-example span.inner {
+    padding-left: 20px; display: block;
+}
+.json-example span {
+    padding-left: 40px; display: block;
+}
 section blockquote {
     margin-top: 10px;
 }

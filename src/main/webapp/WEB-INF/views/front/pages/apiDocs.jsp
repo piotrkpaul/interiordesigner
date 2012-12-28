@@ -191,6 +191,7 @@
 
             <b>Nie podano kompletnych danych.</b>
             <blockquote>
+                Nie wszystkie, wymagane dane zostały przesłane.
                 <p><Strong>String :</Strong> NotAllRequiredFields</p>
             </blockquote>
         </div>
@@ -215,7 +216,7 @@
                 </tr>
                 <tr>
                     <td class="bold">HTTP</td>
-                    <td>POST</td>
+                    <td>GET</td>
                 </tr>
                 <tr>
                     <td class="bold">uri</td>
@@ -223,7 +224,7 @@
                 </tr>
                 <tr>
                     <td class="bold">Return Type</td>
-                    <td>List< ProjectDataEntity > (json)</td>
+                    <td>ArrayList< ProjectDataEntity > (json)</td>
                 </tr>
                 </tbody>
             </table>
@@ -267,49 +268,147 @@
             <b>Poprawna odpowiedź</b>
 
             <p class="json-example">
-                [
-
-                    [
-                        2,
-                        1355183589000,
-                        1355183589000,
-                        "ja@piotrpaul.pl",
-                        "fsdfdsfdsfds",
-                        "fdsfdsfdsfsdfds"
-                    ],
-                    [
-                        3,
-                        1355440734000,
-                        1355440734000,
-                        "ja@piotrpaul.pl",
-                        "Zupełnie nowy p",
-                        "fdsfdsfdsfdsfdsfsdsdf"
-                    ],
-                    [
-                        5,
-                        1356473973000,
-                        1356473973000,
-                        "ja@piotrpaul.pl",
-                        "Projekt REST",
-                        "Projekt stworzony przez rest"
-                    ],
-                    [
-                        6,
-                        1356474406000,
-                        1356564454000,
-                        "ja@piotrpaul.pl",
-                        "project title",
-                        "description"
-                    ]
-                ]
+                [<span class="inner">   <br />
+                <span>{    <br />
+                "id": 2,<br />
+                "ownerId": "ja@piotrpaul.pl",<br />
+                "title": "Koncepcja kuchni",<br />
+                "projectDescription": "Kuchnia w nismim budżecie.",<br />
+                "dateOfCreation": 1355183589000,<br />
+                "dateOfLastEdit": 1355183589000,<br />
+                "dataWalls": "",<br />
+                "dataObjects": ""<br />
+                },  </span><br />
+                <span>{<br />
+                "id": 6,<br />
+                "ownerId": "ja@piotrpaul.pl",<br />
+                "title": "Pokoj dzienny",<br />
+                "projectDescription": "Drogie meble do pokoju dziennego",<br />
+                "dateOfCreation": 1356474406000,<br />
+                "dateOfLastEdit": 1356564454000,<br />
+                "dataWalls": "",<br />
+                "dataObjects": ""<br />
+                },  </span>  <br />
+                <span>{<br />
+                "id": 8,<br />
+                "ownerId": "ja@piotrpaul.pl",<br />
+                "title": "Biuro",<br />
+                "projectDescription": "sample_description",<br />
+                "dateOfCreation": 1356703319000,<br />
+                "dateOfLastEdit": 1356703319000,<br />
+                "dataWalls": "",<br />
+                "dataObjects": ""<br />
+                },  </span>
+                ]  </span>
             </p>
 
 
-            <b>Nie podano kompletnych danych.</b>
+            <b>Błąd autoryzacji.</b>
             <blockquote>
-                <p><Strong>String :</Strong> NotAllRequiredFields</p>
+                Podano błędne dane logowania.
+                <p><Strong>String :</Strong> WrongCredentionals</p>
             </blockquote>
         </div>
 
    </div>
-    </section>
+    <div>
+        <h3>2.2 Pobieranie danych o projekcie</h3>
+
+        <div>
+            <p class="lead">Informacje</p>
+            <table class="table table-hover">
+                <tbody>
+                <tr>
+                    <td class="bold">Wymaga autoryzacji ?</td>
+                    <td>TAK</td>
+                </tr>
+                <tr>
+                    <td class="bold">HTTP</td>
+                    <td>GET</td>
+                </tr>
+                <tr>
+                    <td class="bold">uri</td>
+                    <td>/project/<b>{id}</b></td>
+                </tr>
+                <tr>
+                    <td class="bold">Return Type</td>
+                    <td>ProjectDataEntity (json)</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p class="lead">Parametry</p>
+
+            <table class="table table-hover">
+                <thead>
+                <th>Parametr</th>
+                <th>Wartość</th>
+                <th>Wymagany?</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="bold param-info">username</td>
+                    <td>
+                        Przekazujemy adres email użytkownika.
+                        <blockquote>
+                            <p><strong>Przykład: </strong> ja@piotrpaul.pl</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">password</td>
+                    <td>
+                        Hash sha1 z hasła użytkownika.
+                        <blockquote>
+                            <p><strong>Przykład: </strong>dd1a4bddd89315868df7009f38b2cd582b1d7a65</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p class="lead">Przykładowe odpowiedzi</p>
+
+            <b>Poprawna odpowiedź</b>
+
+            <p class="json-example">
+                <span class="inner">{<br />
+                <span>"id": 8,<br />
+                "ownerId": "ja@piotrpaul.pl",<br />
+                "title": "Biuro",<br />
+                "projectDescription": "sample_description",<br />
+                "dateOfCreation": 1356703319000,<br />
+                "dateOfLastEdit": 1356703319000,<br />
+                "dataWalls": "<b>ArrayList < WallItem > (JSON)</b>",<br />
+                "dataObjects": "<b>ArrayList < FurnitureItem > (JSON)</b>"<br /></span>
+                } </span>
+            </p>
+
+              <br />
+            <b>Projekt o podanym ID nie istnieje.</b>
+            <blockquote>
+                Projekt, którego identyfikator został podany, nie istnieje w bazie danych.
+                <p><Strong>String :</Strong> ProjectDoesntExist</p>
+            </blockquote>
+
+            <b>Brak uprawnień</b>
+            <blockquote>
+                Projekt, którego identyfikator został podany, należy do innego użytkownika.
+                <p><Strong>String :</Strong> NotAnOwner</p>
+            </blockquote>
+
+            <b>Nie podano kompletnych danych.</b>
+            <blockquote>
+                Błędne dane logowania.
+                <p><Strong>String :</Strong> WrongCredentionals</p>
+            </blockquote>
+
+
+        </div>
+
+    </div>
+</section>
