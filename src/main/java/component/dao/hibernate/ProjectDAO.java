@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,9 +28,11 @@ public class ProjectDAO implements ProjectDAOInterface {
 
     public void add(ProjectDataEntity projectEntity) {
         sessionFactory.getCurrentSession().save(projectEntity);
-        System.out.println(projectEntity.getId());
-        sessionFactory.getCurrentSession().flush();
-        System.out.println(projectEntity.getId());
+
+    }
+    public Integer getIdAfterAdd(String userId, Timestamp dateOfCreation) {
+        return (Integer) sessionFactory.getCurrentSession().createCriteria(ProjectDataEntity.class).setProjection(Projections.projectionList()
+                .add(Projections.property("id"))).add(Restrictions.eq("ownerId", userId)).add(Restrictions.eq("dateOfCreation", dateOfCreation)).uniqueResult();
     }
 
     public void update(ProjectDataEntity projectEntity) {

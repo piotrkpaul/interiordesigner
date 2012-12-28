@@ -622,7 +622,8 @@
             </blockquote>
 
 
-                Błędne dane autoryzacji.
+                <b>Błędne dane autoryzacji.</b>
+            <blockquote>
                 <p><Strong>String :</Strong> WrongCredentionals</p>
             </blockquote>
         </div>

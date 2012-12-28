@@ -22,14 +22,13 @@ public class ProjectService {
     public ProjectDAO projectDAO;
 
     @Secured("ROLE_USER")
-    public Integer createProject(ProjectDataEntity projectEntity) {
+    public void createProject(ProjectDataEntity projectEntity) {
 
         Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
         projectEntity.setDateOfCreation(dateOFCreation);
         projectEntity.setDateOfLastEdit(dateOFCreation);
 
         projectDAO.add(projectEntity);
-        return projectEntity.getId();
     }
 
     @Secured("ROLE_USER")
@@ -56,6 +55,17 @@ public class ProjectService {
     }
 
     /* Api Methods */
+
+    public Integer apiCreateProject(ProjectDataEntity projectEntity) {
+
+        Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
+        projectEntity.setDateOfCreation(dateOFCreation);
+        projectEntity.setDateOfLastEdit(dateOFCreation);
+
+        projectDAO.add(projectEntity);
+        return projectDAO.getIdAfterAdd(projectEntity.getOwnerId(), projectEntity.getDateOfCreation());
+    }
+
     public String apiGetProjectListByUser(String userId) throws IOException {
         List<ProjectDataEntity> database = projectDAO.getListByUser(userId);
         ObjectMapper mapper = new ObjectMapper();
