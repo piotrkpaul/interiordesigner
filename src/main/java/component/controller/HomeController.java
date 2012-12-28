@@ -2,8 +2,6 @@ package component.controller;
 
 import component.service.UserService;
 import entity.UserEntity;
-import org.codehaus.jackson.JsonGenerationException;
-import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -18,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
-import java.io.IOException;
 import java.security.Principal;
 import java.util.Map;
 
@@ -54,11 +51,11 @@ public class HomeController {
     /* RESTful custom authorisation */
     @RequestMapping(value="/logowanie", method = RequestMethod.POST)
     @ResponseBody
-    public Object apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
+    public Object apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
         UserEntity user = userService.getCredentials(email, password);
+
         if(user.getEmail()!=null) {
-            ObjectMapper mapper = new ObjectMapper();
-            return mapper.writeValueAsString(user);
+            return user;
         } else {
             return "WrongCredentionals";
         }

@@ -8,6 +8,7 @@ import org.hibernate.criterion.Restrictions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -40,8 +41,8 @@ public class ProjectDAO implements ProjectDAOInterface {
         return (ProjectDataEntity) sessionFactory.getCurrentSession().createCriteria(ProjectDataEntity.class).add(Restrictions.eq("id", itemId)).uniqueResult();
     }
 
-    public List<ProjectDataEntity> getAllByUser(String userId) {
-        return sessionFactory.getCurrentSession().createCriteria(ProjectDataEntity.class).setProjection(Projections.projectionList()
+    public ArrayList<ProjectDataEntity> getAllByUser(String userId) {
+        return (ArrayList<ProjectDataEntity>) sessionFactory.getCurrentSession().createCriteria(ProjectDataEntity.class).setProjection(Projections.projectionList()
                 .add(Projections.property("id"))
                 .add(Projections.property("dateOfCreation"))
                 .add(Projections.property("dateOfLastEdit"))
