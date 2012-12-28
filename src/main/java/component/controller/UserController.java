@@ -3,6 +3,8 @@ package component.controller;
 import component.service.UserService;
 import entity.UserEntity;
 import javassist.expr.NewArray;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -54,13 +56,15 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody UserEntity apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException {
+    public @ResponseBody Object apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException, IOException {
         if(bindingResult.hasErrors()) {
-            System.out.println(bindingResult.getSuppressedFields());
-            throw new BindException(bindingResult);
+
+            return "NotAllRequiredFields";
         }
         else {
-            return userService.createNewUserAndAuthenticate(userEntity, request, false);
+            ObjectMapper mapper = new ObjectMapper();
+
+            return mapper.writeValueAsString(userService.createNewUserAndAuthenticate(userEntity, request, false));
         }
     }
 

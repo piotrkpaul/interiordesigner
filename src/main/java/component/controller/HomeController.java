@@ -2,6 +2,8 @@ package component.controller;
 
 import component.service.UserService;
 import entity.UserEntity;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -16,6 +18,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.io.IOException;
 import java.security.Principal;
 import java.util.Map;
 
@@ -34,6 +37,14 @@ public class HomeController {
     public String showHomePage(Map<String, Object> model) {
         return "homeScreen";
     }
+
+    @RequestMapping({"/api"})
+    public String apiDocumentation(Map<String, Object> model) {
+        model.put("pageHeading", "RESTful API");
+        model.put("pageLead", "Dokumentacja webapi naszej aplikacji");
+        return "apiDocs";
+    }
+
     @PreAuthorize("isAnonymous()")
     @RequestMapping({"/logowanie"})
     public String showLoginPage(Map<String, Object> model) {
@@ -43,8 +54,14 @@ public class HomeController {
     /* RESTful custom authorisation */
     @RequestMapping(value="/logowanie", method = RequestMethod.POST)
     @ResponseBody
-    public UserEntity apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
-        return userService.getCredentials(email, password);
+    public Object apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
+        UserEntity user = userService.getCredentials(email, password);
+        if(user.getEmail()!=null) {
+            ObjectMapper mapper = new ObjectMapper();
+            return mapper.writeValueAsString(user);
+        } else {
+            return "WrongCredentionals";
+        }
     }
     @PreAuthorize("isAnonymous()")
     @RequestMapping(value = "/rejestracja", method = RequestMethod.GET)

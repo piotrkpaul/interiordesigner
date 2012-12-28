@@ -49,6 +49,12 @@
         <put-attribute name="content" value="/WEB-INF/views/front/general/errorPage.jsp" />
     </definition>
 
+
+    <definition name="apiDocs" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/apiDocs.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/apiDocsSidebar.jsp" />
+    </definition>
+
     <definition name="userListView" extends="doubleColumnLayout">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
     </definition>

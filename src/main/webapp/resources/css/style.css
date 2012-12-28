@@ -1,9 +1,30 @@
+.bold {
+    font-weight: bold;
+}
+.param-info {
+    width: 15%;
+}
+.json-example {
+    background-color: whiteSmoke;
+    border: 1px solid #CCC;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    padding: 10px;
+}
+section blockquote {
+    margin-top: 10px;
+}
+.table-required {
+    text-align: center;
+}
 .furnitureItemList {
     list-style-type: none;
 }
 .furnitureItemList li {
     float: left;
-    margin-left: 10px;
+    margin-left: 5px;
     margin-bottom: 10px;
     width: 220px;
 }

@@ -7,6 +7,7 @@ import entity.FurnitureItem;
 import entity.ProjectDataEntity;
 import entity.UserEntity;
 import entity.WallItem;
+import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -147,9 +148,10 @@ public class ProjectController {
      */
     @RequestMapping(value ="/", method = RequestMethod.GET, produces="application/json")
     @ResponseBody
-    public Object getProjectList(@RequestParam("username") String email, @RequestParam("password") String password) {
+    public Object getProjectList(@RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
         UserEntity userEntity = userService.getCredentials(email, password);
         if(userEntity.getId()!=0) {
+
             return projectService.apiGetProjectListByUser(userEntity.getEmail());
         } else {
             return "WrongCredentionals";
@@ -281,13 +283,14 @@ public class ProjectController {
 
     @RequestMapping(value ="/{id}", method = RequestMethod.GET, produces="application/json")
     @ResponseBody
-    public Object getProjectData(@PathVariable Integer id, @RequestParam("username") String email, @RequestParam("password") String password) {
+    public Object getProjectData(@PathVariable Integer id, @RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
         UserEntity userEntity = userService.getCredentials(email, password);
         if(userEntity.getId()!=0) {
             ProjectDataEntity projectDataEntity = projectService.getProject(id);
             if(projectDataEntity!=null) {
                 if (projectDataEntity.getOwnerId().equals(userEntity.getEmail())) {
-                    return projectDataEntity;
+                    ObjectMapper mapper = new ObjectMapper();
+                    return mapper.writeValueAsString(projectDataEntity);
                 } else {
                     return "NowAnOwner";
                 }

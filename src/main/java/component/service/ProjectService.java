@@ -2,11 +2,13 @@ package component.service;
 
 import component.dao.hibernate.ProjectDAO;
 import entity.ProjectDataEntity;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -51,8 +53,20 @@ public class ProjectService {
     }
 
     /* Api Methods */
-    public List<ProjectDataEntity> apiGetProjectListByUser(String userId) {
-        return projectDAO.getAllByUser(userId);
+    public String apiGetProjectListByUser(String userId) {
+        List<ProjectDataEntity> list =  projectDAO.getAllByUser(userId);
+
+        ObjectMapper mapper = new ObjectMapper();
+
+        String output = null;
+        try {
+             output = mapper.writeValueAsString(list);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(list);
+        return output;
     }
 
 
