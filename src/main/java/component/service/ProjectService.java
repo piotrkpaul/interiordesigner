@@ -22,13 +22,14 @@ public class ProjectService {
     public ProjectDAO projectDAO;
 
     @Secured("ROLE_USER")
-    public void createProject(ProjectDataEntity projectEntity) {
+    public Integer createProject(ProjectDataEntity projectEntity) {
 
         Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
         projectEntity.setDateOfCreation(dateOFCreation);
         projectEntity.setDateOfLastEdit(dateOFCreation);
 
         projectDAO.add(projectEntity);
+        return projectEntity.getId();
     }
 
     @Secured("ROLE_USER")
@@ -56,18 +57,10 @@ public class ProjectService {
 
     /* Api Methods */
     public String apiGetProjectListByUser(String userId) throws IOException {
-        ArrayList<ProjectDataEntity> list = new ArrayList<ProjectDataEntity>();
         List<ProjectDataEntity> database = projectDAO.getListByUser(userId);
-
-        for(ProjectDataEntity p : database) {
-            p.setDataObjects("");
-            p.setDataWalls("");
-            list.add(p);
-        }
         ObjectMapper mapper = new ObjectMapper();
 
-        return mapper.writeValueAsString(list);
-
+        return mapper.writeValueAsString(database);
     }
 
 

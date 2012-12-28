@@ -27,6 +27,9 @@ public class ProjectDAO implements ProjectDAOInterface {
 
     public void add(ProjectDataEntity projectEntity) {
         sessionFactory.getCurrentSession().save(projectEntity);
+        System.out.println(projectEntity.getId());
+        sessionFactory.getCurrentSession().flush();
+        System.out.println(projectEntity.getId());
     }
 
     public void update(ProjectDataEntity projectEntity) {

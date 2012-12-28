@@ -60,12 +60,15 @@ public class UserController {
         if(bindingResult.hasErrors()) {
 
             return "NotAllRequiredFields";
-        }
-        else {
-            ObjectMapper mapper = new ObjectMapper();
+        } else {
+            if(userService.checkIfExist(userEntity.getEmail())) {
+                return "EmailAlreadyTaken";
+            } else {
+                ObjectMapper mapper = new ObjectMapper();
 
-            return mapper.writeValueAsString(userService.createNewUserAndAuthenticate(userEntity, request, false));
-        }
+                return mapper.writeValueAsString(userService.createNewUserAndAuthenticate(userEntity, request, false));
+            }
+       }
     }
 
     @RequestMapping(value="/check", method = RequestMethod.POST)

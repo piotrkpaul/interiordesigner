@@ -250,8 +250,7 @@ public class ProjectController {
                 projectData.setDataObjects((String)furniture);
                 projectData.setDataWalls((String)walls);
 
-                projectService.createProject(projectData);
-                return "ProjectCreated";
+                return "ID=" +  projectService.createProject(projectData);
             }
 
         } else {
