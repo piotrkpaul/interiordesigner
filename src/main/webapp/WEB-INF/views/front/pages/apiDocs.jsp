@@ -187,7 +187,12 @@
                 "role": "ROLE_ADMIN"<br />
                 }
             </p>
-
+            <br />
+            <b>Email znajduje się już w bazie.</b>
+            <blockquote>
+                Użytkownik o podanym adresie email znajduje się już w bazie danych.
+                <p><Strong>String :</Strong> EmailAlreadyTaken</p>
+            </blockquote>
 
             <b>Nie podano kompletnych danych.</b>
             <blockquote>
@@ -620,6 +625,135 @@
                 Błędne dane autoryzacji.
                 <p><Strong>String :</Strong> WrongCredentionals</p>
             </blockquote>
+        </div>
+    </div>
+    <div>
+        <h3>2.5 Edycja istniejącego projektu</h3>
+
+        <div>
+            <p class="lead">Informacje</p>
+            <table class="table table-hover">
+                <tbody>
+                <tr>
+                    <td class="bold">Wymaga autoryzacji ?</td>
+                    <td>Tak</td>
+                </tr>
+                <tr>
+                    <td class="bold">HTTP</td>
+                    <td>PUT</td>
+                </tr>
+                <tr>
+                    <td class="bold">uri</td>
+                    <td>/project/<b>{id}</b></td>
+                </tr>
+                <tr>
+                    <td class="bold">Return Type</td>
+                    <td>String status</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p class="lead">Parametry</p>
+
+            <table class="table table-hover">
+                <thead>
+                <th>Parametr</th>
+                <th>Wartość</th>
+                <th>Wymagany?</th>
+                </thead>
+                <tbody>
+                <tr>
+                    <td class="bold param-info">username</td>
+                    <td>
+                        Przekazujemy adres email użytkownika.
+                        <blockquote>
+                            <p><strong>Przykład: </strong> ja@piotrpaul.pl</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">password</td>
+                    <td>
+                        Hash sha1 z hasła użytkownika.
+                        <blockquote>
+                            <p><strong>Przykład: </strong>dd1a4bddd89315868df7009f38b2cd582b1d7a65</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">title</td>
+                    <td>
+                        Tytuł projektu (String). Jeśli nie został zmieniony, nie trzeba go przesyłać.
+                        <blockquote>
+                            <p><strong>Przykład: </strong>"Projekt biura"</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Nie</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">desc</td>
+                    <td>
+                        Opis projektu (String). Jeśli nie został zmieniony, nie trzeba go przesyłać.
+                        <blockquote>
+                            <p><strong>Przykład:</strong> "Funkcjonalne i tanie meble dla mojego biura."</p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Nie</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">walls</td>
+                    <td>
+                        Lista ścian, przesłana jako json. (Arraylist< WallItem > (json))
+                        <blockquote>
+                            <p><strong>Przykład: </strong></p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                <tr>
+                    <td class="bold param-info">furniture</td>
+                    <td>
+                        Lista mebli, przesłana jako json. (ArrayList< FurnitureItem > (json))
+                        <blockquote>
+                            <p><strong>Przykład: </strong></p>
+                        </blockquote>
+                    </td>
+                    <td class="table-required">Tak</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p class="lead">Przykładowe odpowiedzi</p>
+
+            <b>Poprawna odpowiedź</b>
+
+            <p class="json-example">
+                ProjectUpdated
+            </p>
+
+            <br />
+            <b>Projekt o podanym ID nie istnieje.</b>
+            <blockquote>
+                Projekt, którego identyfikator został podany, nie istnieje w bazie danych.
+                <p><Strong>String :</Strong> ProjectDoesntExist</p>
+            </blockquote>
+
+            <b>Brak uprawnień</b>
+            <blockquote>
+                Projekt, którego identyfikator został podany, należy do innego użytkownika.
+                <p><Strong>String :</Strong> NotAnOwner</p>
+            </blockquote>
+
+            <b>Nie podano kompletnych danych.</b>
+            <blockquote>
+                Błędne dane logowania.
+                <p><Strong>String :</Strong> WrongCredentionals</p>
+            </blockquote>
+
         </div>
     </div>
 </section>
