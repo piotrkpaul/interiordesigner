@@ -197,6 +197,7 @@ section #accordion .ui-accordion-content .btn-group .btn {
 
 #projectData {
     width: 759px;
+    overflow: scroll;
     height: 360px;
     background: url("../img/grid.png") top left;
     border-left:1px solid #939393;
