@@ -253,20 +253,15 @@ public class ProjectController {
             ProjectDataEntity projectData = projectService.getProject(id);
             if(projectData!=null) {
                 if (projectData.getOwnerId().equals(email)) {
-
-
-                    if(!walls.isEmpty()) {
-                        projectData.setDataWalls((String)walls);
-                    }
-                    if(!furniture.isEmpty()) {
-                        projectData.setDataObjects((String)furniture);
-                    }
                     if(title!=null){
                         projectData.setTitle(title);
                     }
                     if(description!=null) {
                         projectData.setProjectDescription(description);
                     }
+
+                    projectData.setDataWalls(walls);
+                    projectData.setDataObjects(furniture);
 
                     projectService.apiUpdateProject(projectData);
                     return "ProjectUpdated";
