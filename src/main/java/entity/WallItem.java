@@ -19,6 +19,8 @@ public class WallItem {
         this.y2 = y2;
     }
 
+    public WallItem(){}
+
     public int getX1() {
         return x1;
     }

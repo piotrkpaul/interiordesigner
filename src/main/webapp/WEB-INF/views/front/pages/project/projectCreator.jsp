@@ -11,6 +11,7 @@
 
     <div id="creator">
         <div id="projectData">
+            ${furnitureHtml}
         </div>
         <div id="objectList">
             <ul>

@@ -9,7 +9,9 @@ import entity.UserEntity;
 import entity.WallItem;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.JsonNode;
+import org.codehaus.jackson.JsonParseException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.codehaus.jackson.type.TypeReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
@@ -59,12 +61,23 @@ public class ProjectController {
     }
 
     @RequestMapping(value = {"/{id}"}, method = RequestMethod.GET, produces="text/html")
-    public String showProject(@RequestParam("id") int id, Map<String, Object> model) {
+    public String showProject(@PathVariable int id, Map<String, Object> model) throws IOException {
 
         ProjectDataEntity projectData = projectService.getProject(id);
         if(projectData!=null) {
-            model.put("projectData", projectData);
-            return "projectDetailView";
+
+            ObjectMapper mapper = new ObjectMapper();
+            List<FurnitureItem> myObjects = mapper.readValue(projectData.getDataObjects(), mapper.getTypeFactory().constructCollectionType(List.class, FurnitureItem.class));
+
+            String furnitureHtml = "";
+            for(FurnitureItem p : myObjects) {
+                furnitureHtml += "<div class='ui-draggable furniture' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
+            }
+
+            model.put("projectDataEntity", projectData);
+            model.put("furnitureHtml", furnitureHtml) ;
+
+            return "projectCreatorPage";
         }
         else {
             model.put("error", "Projekt o podanym id nie istnieje.");
@@ -214,39 +227,6 @@ public class ProjectController {
                 projectData.setOwnerId(userEntity.getEmail());
                 projectData.setTitle(title);
                 projectData.setProjectDescription(description);
-
-               /*
-
-                ArrayList<FurnitureItem> furnitureList = new ArrayList<FurnitureItem>();
-
-                ArrayList<WallItem> wallList = new ArrayList<WallItem>();
-
-                    furnitureList.add(new FurnitureItem("ID123", 5, 10, 20, 35));
-                    furnitureList.add(new FurnitureItem("ID1fg23", 15, 30, 50, 55));
-                    furnitureList.add(new FurnitureItem("ID1df23", 35, 13, 40, 36));
-
-                    WallItem w1 = new WallItem(3, 4, 5, 6);
-                    WallItem w2 = new WallItem(8, 7, 5, 4);
-                    WallItem w3 = new WallItem(5, 4, 2, 1);
-
-                    wallList.add(w1);
-                    wallList.add(w2);
-                    wallList.add(w3);
-
-                ObjectMapper mapper = new ObjectMapper();
-
-                try {
-                    String furnitureJson = mapper.writeValueAsString(furnitureList);
-                    projectData.setDataObjects(furnitureJson);
-
-                    String wallJson = mapper.writeValueAsString(wallList);
-                    projectData.setDataWalls(wallJson);
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                */
-
                 projectData.setDataObjects((String)furniture);
                 projectData.setDataWalls((String)walls);
 
