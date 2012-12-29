@@ -82,6 +82,9 @@
         <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/project/projectListSidebar.jsp" />
     </definition>
 
+    <definition name="projectViewer" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectViewer.jsp" />
+    </definition>
     <definition name="projectCreatorPage" extends="projectCreator">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectCreator.jsp" />
     </definition>

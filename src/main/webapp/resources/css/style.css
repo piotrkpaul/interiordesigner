@@ -194,7 +194,16 @@ section #accordion .ui-accordion-content .btn-group .btn {
 .projectCreator .form-actions {
     float: left; width: 900px;
 }
-
+#projectDataViewer {
+    width: 100%;
+    overflow: scroll;
+    height: 900px;
+    background: url("../img/grid.png") top left;
+    border-left:1px solid #939393;
+    border-bottom: 1px solid #939393;
+    float: left;
+    position: relative;
+}
 #projectData {
     width: 759px;
     overflow: scroll;

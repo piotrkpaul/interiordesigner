@@ -75,9 +75,12 @@ public class ProjectController {
             }
 
             model.put("projectDataEntity", projectData);
+            model.put("pageHeading", "Projekt: " + projectData.getTitle());
+            model.put("pageLead", "Podgląd projektu użytkownika " + projectData.getOwnerId());
+            model.put("description", projectData.getProjectDescription());
             model.put("furnitureHtml", furnitureHtml) ;
 
-            return "projectCreatorPage";
+            return "projectViewer";
         }
         else {
             model.put("error", "Projekt o podanym id nie istnieje.");
