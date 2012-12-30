@@ -71,7 +71,7 @@ public class ProjectController {
 
             String furnitureHtml = "";
             for(FurnitureItem p : myObjects) {
-                furnitureHtml += "<div class='ui-draggable furniture' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
+                furnitureHtml += "<div class='furniture' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
             }
 
             model.put("projectDataEntity", projectData);

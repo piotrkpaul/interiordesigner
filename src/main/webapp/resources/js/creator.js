@@ -39,15 +39,4 @@ $(document).ready(function () {
             $("#projectData").append(element);
         }
     });
-
-  function rotateItem() {
-        console.log("rotated");
-        var width = this.css("width");
-        var height = this.css("height");
-        this.css({
-            "width": height,
-            "height": width
-        })
-    };
-
 });

@@ -2,13 +2,17 @@ package component.controller;
 
 import component.service.FurnitureService;
 import entity.FurnitureitemsEntity;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 import java.util.Map;
 
 @Controller
@@ -65,6 +69,16 @@ public class FurnitureController {
             model.put("error", "Nie odnaleziono w bazie danych mebla o podanym id.");
             return "redirect:/catalog";
         }
+    }
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.POST, produces = "application/json")
+    @ResponseBody
+    public void apiGetItem(@PathVariable String id, HttpServletResponse response) throws IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html");
+
+        ObjectMapper mapper = new ObjectMapper();
+        response.getWriter().write(mapper.writeValueAsString(furnitureService.getById(id)));
     }
 
 }

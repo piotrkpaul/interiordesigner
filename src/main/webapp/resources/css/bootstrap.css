@@ -4481,7 +4481,7 @@ a.thumbnail:hover {
   left: 0;
   z-index: 1010;
   display: none;
-  width: 236px;
+  width: 320px;
   padding: 1px;
   text-align: left;
   background-color: #ffffff;
@@ -4497,6 +4497,7 @@ a.thumbnail:hover {
   -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
+
 }
 .popover.top {
   margin-top: -10px;
@@ -4524,6 +4525,15 @@ a.thumbnail:hover {
 }
 .popover-content {
   padding: 9px 14px;
+    height: 200px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    text-align: justify;
+}
+.popover-content img {
+    width: 100px;
+    float: right;
+    margin: 0 0 5px 5px;
 }
 .popover .arrow,
 .popover .arrow:after {
