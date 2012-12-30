@@ -69,7 +69,6 @@ public class ProjectController {
             ObjectMapper mapper = new ObjectMapper();
             List<FurnitureItem> furnitureList = mapper.readValue(projectData.getDataObjects(), mapper.getTypeFactory().constructCollectionType(List.class, FurnitureItem.class));
             List<WallItem> wallsList = mapper.readValue(projectData.getDataWalls(), mapper.getTypeFactory().constructCollectionType(List.class, WallItem.class));
-            System.out.println(projectData.getDataWalls());
 
             String furnitureHtml = "";
             for(FurnitureItem p : furnitureList) {
@@ -78,18 +77,16 @@ public class ProjectController {
 
             String wallsHtml = "";
             for(WallItem p : wallsList) {
-                if(p.getX1() == p.getX2()) {
+                if(p.getX2()-p.getX1() <= p.getY2()-p.getY1()) {
                     Integer height = p.getY2() - p.getY1();
-                    wallsHtml += "<div class='wall' style='position:absolute; width: 5px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
+                    wallsHtml += "<div class='wall' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
 
-                } else if (p.getY1() == p.getY2()) {
+                } else {
                     Integer width = p.getX2() - p.getX1();
-                    wallsHtml += "<div class='wall' style='position:absolute; height: 5px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
+                    wallsHtml += "<div class='wall' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
 
                 }
             }
-
-            System.out.println(wallsHtml);
 
             model.put("projectDataEntity", projectData);
             model.put("pageHeading", "Projekt: " + projectData.getTitle());
