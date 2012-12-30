@@ -194,6 +194,10 @@ section #accordion .ui-accordion-content .btn-group .btn {
 .projectCreator .form-actions {
     float: left; width: 900px;
 }
+.wall {
+    background: #000;
+    z-index: 50;
+}
 #projectDataViewer {
     width: 100%;
     overflow: scroll;

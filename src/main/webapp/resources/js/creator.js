@@ -40,3 +40,26 @@ $(document).ready(function () {
         }
     });
 });
+
+//Opis przedmiotu
+$(document).on('click', '.furniture', function (event) {
+    var id = $(this).text();
+    var furniture = $(this);
+    if (furniture.attr("data-original-title") == null) {
+        $.ajax({
+            type:"POST",
+            url:"../catalog/" + id
+        }).done(function (msg) {
+                var furnitureData = JSON.parse(msg);
+                var itemDetails = '<img src="' + furnitureData.itemImageUrl + '" />' +
+                    '<b>ID: </b>' + furnitureData.id +
+                    '<br /><b>Kategoria: </b>' + furnitureData.itemCategory +
+                    '<br /><b>Cena: </b>' + furnitureData.itemPrice + ' zł<br />';
+
+                furniture.attr("data-original-title", furnitureData.itemName);
+
+                furniture.attr("data-content", itemDetails + furnitureData.itemDescription);
+                furniture.popover({ html:true}).popover('show');
+            });
+    }
+});

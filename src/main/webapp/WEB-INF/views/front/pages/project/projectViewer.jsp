@@ -14,30 +14,6 @@
 <div id="creator">
     <div id="projectDataViewer">
         ${furnitureHtml}
+        ${wallsHtml}
     </div>
 </div>
-
-
-<script type="text/javascript">
-    $(document).on('click', '.furniture', function (event) {
-        var id = $(this).text();
-        var furniture = $(this);
-        if (furniture.attr("data-original-title") == null) {
-            $.ajax({
-                type:"POST",
-                url:"${pageContext.request.contextPath}/catalog/" + id
-            }).done(function (msg) {
-                        var furnitureData = JSON.parse(msg);
-                        var itemDetails = '<img src="' + furnitureData.itemImageUrl + '" />' +
-                                          '<b>ID: </b>' + furnitureData.id +
-                                          '<br /><b>Kategoria: </b>' + furnitureData.itemCategory +
-                                          '<br /><b>Cena: </b>' + furnitureData.itemPrice + ' zł<br />';
-
-                        furniture.attr("data-original-title", furnitureData.itemName);
-
-                        furniture.attr("data-content", itemDetails + furnitureData.itemDescription);
-                        furniture.popover({ html:true}).popover('show');
-                    });
-        }
-    });
-</script>
