@@ -17,12 +17,11 @@
     <a class="carousel-control left" href="#homeSlider" data-slide="prev">&lsaquo;</a>
     <a class="carousel-control right" href="#homeSlider" data-slide="next">&rsaquo;</a>
     <div id="sliderContent">
-        <h1>Interior Designer!</h1>
+        <h1>Interior Designer</h1>
 
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero
-            unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p>Rozproszona aplikacja webowa, wspomagająca projektowanie powierzchni użytkowych. Dzięki udostępnionemu API, istnieje możliwość korzystania z aplikacji mobilnych dedykowanych dla systemów iOS i Adndroid.</p>
 
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <p><a class="btn btn-primary btn-large" href="rejestracja">Rejestracja &raquo;</a></p>
     </div>
 </div>
 
@@ -36,20 +35,17 @@
         <p><a class="btn" href="catalog">Przejdź do katalogu&raquo;</a></p>
     </div>
     <div class="span4">
-        <h2>Logowanie</h2>
+        <h2>Projekty</h2>
 
-        <p>Przejdź do sekcji logowania do systemu. </p>
+        <p>Przeglądaj bazę projektów stworzone przez innych użytkowników, z użyciem naszego systemu. To doskonałe miejsce do czerpania inspiracji!  </p>
 
-        <p><a class="btn" href="logowanie">Logowanie &raquo;</a></p>
+        <p><a class="btn" href="project">Baza projektów &raquo;</a></p>
     </div>
     <div class="span4">
-        <h2>Heading</h2>
+        <h2>Rest API</h2>
 
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta
-            felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-            massa justo sit amet risus.</p>
-
-        <p><a class="btn" href="#">View details &raquo;</a></p>
+        <p>Dzięki zastosowaniu technologi RESTful Web Servieces, istnieje możliwość tworzenia aplikacji klienckich, działających z naszym systemem. Zapraszamy do zapoznania się z dokumentacją.
+        <p><a class="btn" href="api">Dokumentacja API&raquo;</a></p>
     </div>
 </div>
 

@@ -10,6 +10,7 @@
 
     <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/jquery-ui.js"></script>
+    <script src="${pageContext.request.contextPath}/resources/js/jquery.overscroll.min.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/bootstrap.js"></script>
     <script src="${pageContext.request.contextPath}/resources/js/scripts.js"></script>
 
@@ -26,4 +27,4 @@
     <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 </head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<body data-spy="scroll" data-target=".bs-docs-sidebar" id="#top-of-page">

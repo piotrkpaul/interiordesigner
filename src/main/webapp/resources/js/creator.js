@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     $(".furnitureItem").draggable({
         snap: true,
         helper: "clone",
@@ -41,6 +42,14 @@ $(document).ready(function () {
     });
 });
 
+$(function(){
+    $("#creator").overscroll({
+        cancelOn: '.no-drag',
+        scrollLeft: 1,
+        scrollTop: 1
+    });
+});
+
 //Opis przedmiotu
 $(document).on('click', '.furniture', function (event) {
     var id = $(this).text();
@@ -59,7 +68,7 @@ $(document).on('click', '.furniture', function (event) {
                 furniture.attr("data-original-title", furnitureData.itemName);
 
                 furniture.attr("data-content", itemDetails + furnitureData.itemDescription);
-                furniture.popover({ html:true}).popover('show');
+                furniture.clickover({ html:true}).clickover();
             });
     }
 });

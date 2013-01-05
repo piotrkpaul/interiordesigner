@@ -79,11 +79,11 @@ public class ProjectController {
             for(WallItem p : wallsList) {
                 if(p.getX2()-p.getX1() <= p.getY2()-p.getY1()) {
                     Integer height = p.getY2() - p.getY1();
-                    wallsHtml += "<div class='wall' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
+                    wallsHtml += "<div class='wall' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-height'>" + height + " cm</span></div>";
 
                 } else {
                     Integer width = p.getX2() - p.getX1();
-                    wallsHtml += "<div class='wall' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'></div>";
+                    wallsHtml += "<div class='wall' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-width'>" + width + " cm</span></div>";
 
                 }
             }
@@ -97,6 +97,50 @@ public class ProjectController {
 
 
             return "projectViewer";
+        }
+        else {
+            model.put("error", "Projekt o podanym id nie istnieje.");
+            return "projectErrorPage";
+        }
+    }
+
+    @RequestMapping(value = {"/edit/{id}"}, method = RequestMethod.GET, produces="text/html")
+    public String editProject(@PathVariable int id, Map<String, Object> model) throws IOException {
+
+        ProjectDataEntity projectData = projectService.getProject(id);
+        if(projectData!=null) {
+
+            ObjectMapper mapper = new ObjectMapper();
+            List<FurnitureItem> furnitureList = mapper.readValue(projectData.getDataObjects(), mapper.getTypeFactory().constructCollectionType(List.class, FurnitureItem.class));
+            List<WallItem> wallsList = mapper.readValue(projectData.getDataWalls(), mapper.getTypeFactory().constructCollectionType(List.class, WallItem.class));
+
+            String furnitureHtml = "";
+            for(FurnitureItem p : furnitureList) {
+                furnitureHtml += "<div class='furniture movable' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
+            }
+
+            String wallsHtml = "";
+            for(WallItem p : wallsList) {
+                if(p.getX2()-p.getX1() <= p.getY2()-p.getY1()) {
+                    Integer height = p.getY2() - p.getY1();
+                    wallsHtml += "<div class='wall editable' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-height'>" + height + " cm</span></div>";
+
+                } else {
+                    Integer width = p.getX2() - p.getX1();
+                    wallsHtml += "<div class='wall editable' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-width'>" + width + " cm</span></div>";
+
+                }
+            }
+
+            model.put("projectDataEntity", projectData);
+            model.put("pageHeading", "Projekt: " + projectData.getTitle());
+            model.put("pageLead", "Podgląd projektu użytkownika " + projectData.getOwnerId());
+            model.put("description", projectData.getProjectDescription());
+            model.put("furnitureHtml", furnitureHtml) ;
+            model.put("wallsHtml", wallsHtml) ;
+
+
+            return "projectEditor";
         }
         else {
             model.put("error", "Projekt o podanym id nie istnieje.");
