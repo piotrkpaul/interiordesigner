@@ -85,7 +85,7 @@
     <definition name="projectViewer" extends="projectCreator">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectViewer.jsp" />
     </definition>
-    <definition name="projectCreatorPage" extends="projectCreator">
+    <definition name="projectEditor" extends="projectCreator">
         <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectEditor.jsp" />
     </definition>
     <definition name="projectCreatorPage" extends="projectCreator">

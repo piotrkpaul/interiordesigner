@@ -1,54 +1,10 @@
-$(document).ready(function () {
-
-    $(".furnitureItem").draggable({
-        snap: true,
-        helper: "clone",
-        snapTolerance: 2,
-        containment: "#projectData",
-        revert: "invalid",
-        delay: 400
-    });
-
-    $("#projectData").droppable({
-        accept: ".furnitureItem",
-        drop: function(event, ui) {
-            var element = $(ui.draggable).clone();
-
-            var x = parseInt(ui.position.left - this.offsetLeft, 10);
-            var y = parseInt(ui.position.top - this.offsetTop, 10);
-            var width = element[0].getElementsByClassName("width")[0];
-            var height = element[0].getElementsByClassName("height")[0];
-            var name = element[0].getElementsByClassName("name")[0];
-
-            element.css({
-                "position": "absolute",
-                "top": y,
-                "left": x,
-                "width": parseInt(width.innerText/2, 10),
-                "height": parseInt(height.innerText/2, 10)
-            }).addClass("furniture").removeClass('furnitureItem').draggable({
-                    snap: true,
-                    snapMode: "outer",
-                    snapTolerance: 8,
-                    containment: "#projectData"
-                });
-
-
-            //Zeruje zawartość (dane) elementu
-            element[0].innerHTML = "";
-
-            $("#projectData").append(element);
-        }
-    });
-});
-
-$(function(){
+/* $(function(){
     $("#creator").overscroll({
-        cancelOn: '.no-drag',
+        cancelOn: '.furniture',
         scrollLeft: 1,
         scrollTop: 1
     });
-});
+});*/
 
 //Opis przedmiotu
 $(document).on('click', '.furniture', function (event) {
@@ -72,3 +28,74 @@ $(document).on('click', '.furniture', function (event) {
             });
     }
 });
+
+$(function() {
+
+    $(".movable").draggable({ containment: "#projectDataViewer", obstacle: ".obstacle", preventCollision: true });
+
+    $('.movable').on('mousedown', function(e) {
+        $(this).removeClass('obstacle');
+    });
+    $('.movable').on('mouseup', function(e) {
+        $(this).addClass('obstacle');
+    });
+
+    $("#projectDataEntity").submit(function(e){
+        var furnitureList = [];
+        $(".furniture").each(function(index){
+            furnitureList.push(new furnitureItem(
+                $(this).text(),
+                $(this).css('left').replace('px', ''),
+                $(this).css('top').replace('px', ''),
+                $(this).css('width').replace('px', ''),
+                $(this).css('height').replace('px', ''))
+            );
+        });
+
+        var wallList = [];
+        $(".wall").each(function(index){
+            var x2 = parseInt($(this).css('left').replace('px', ''), 10) + parseInt($(this).css('width').replace('px', ''), 10);
+            var y2 = parseInt($(this).css('top').replace('px', ''), 10) + parseInt($(this).css('height').replace('px', ''), 10);
+            wallList.push(new wallItem(
+                $(this).css('left').replace('px', ''),
+                $(this).css('top').replace('px', ''),
+                x2,
+                y2)
+            );
+        });
+
+
+        var furnitureListJSON = JSON.stringify(furnitureList);
+
+        $('<input />').attr('type', 'hidden')
+            .attr('name', 'dataObjects')
+            .attr('value', furnitureListJSON)
+            .appendTo('#projectDataEntity');
+
+
+        var wallListJSON = JSON.stringify(wallList);
+
+        $('<input />').attr('type', 'hidden')
+            .attr('name', 'dataWalls')
+            .attr('value', wallListJSON)
+            .appendTo('#projectDataEntity');
+
+    });
+
+    function furnitureItem(id, x, y, width, height){
+        this.id = id;
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
+    function wallItem(x1, y1, x2, y2){
+        this.x1 = x1;
+        this.y1 = y1;
+        this.x2 = x2;
+        this.y2 = y2;
+    }
+
+});
+

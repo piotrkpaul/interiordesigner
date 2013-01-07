@@ -217,6 +217,10 @@ section #accordion .ui-accordion-content .btn-group .btn {
     height: 550px;
     overflow: hidden;
     border: 1px solid #939393;
+    overflow: scroll;
+}
+#project_description {
+    height: 70px;
 }
 #projectDataViewer {
     width: 1406px;
