@@ -72,7 +72,7 @@ public class ProjectController {
 
             String furnitureHtml = "";
             for(FurnitureItem p : furnitureList) {
-                furnitureHtml += "<div class='furniture' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
+                furnitureHtml += "<div class='furniture' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "<span class='f_width'>" + p.getWidth() + " cm</span><span class='f_height'>" + p.getHeight() + " cm</span></div>";
             }
 
             String wallsHtml = "";
@@ -116,7 +116,7 @@ public class ProjectController {
 
             String furnitureHtml = "";
             for(FurnitureItem p : furnitureList) {
-                furnitureHtml += "<div class='furniture movable obstacle' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "</div>";
+                furnitureHtml += "<div class='furniture movable obstacle' style='position:absolute; width:" + p.getWidth() + "px; height:" + p.getHeight() + "px; top:" + p.getY() + "px; left:" + p.getX() + "px;'>" + p.getId() + "<span class='f_width'>" + p.getWidth() + " cm</span><span class='f_height'>" + p.getHeight() + " cm</span></div>";
             }
 
             String wallsHtml = "";
