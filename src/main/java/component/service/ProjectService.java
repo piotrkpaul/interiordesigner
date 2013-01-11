@@ -1,13 +1,17 @@
 package component.service;
 
 import component.dao.hibernate.ProjectDAO;
-import component.dao.hibernate.UserDAO;
 import entity.ProjectDataEntity;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.io.IOException;
+import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 @Service("projectService")
@@ -19,6 +23,11 @@ public class ProjectService {
 
     @Secured("ROLE_USER")
     public void createProject(ProjectDataEntity projectEntity) {
+
+        Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
+        projectEntity.setDateOfCreation(dateOFCreation);
+        projectEntity.setDateOfLastEdit(dateOFCreation);
+
         projectDAO.add(projectEntity);
     }
 
@@ -45,6 +54,30 @@ public class ProjectService {
         return projectDAO.getAll();
     }
 
+    /* Api Methods */
+
+    public Integer apiCreateProject(ProjectDataEntity projectEntity) {
+
+        Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
+        projectEntity.setDateOfCreation(dateOFCreation);
+        projectEntity.setDateOfLastEdit(dateOFCreation);
+
+        projectDAO.add(projectEntity);
+        return projectDAO.getIdAfterAdd(projectEntity.getOwnerId(), projectEntity.getDateOfCreation());
+    }
+
+    public String apiGetProjectListByUser(String userId) throws IOException {
+        List<ProjectDataEntity> database = projectDAO.getListByUser(userId);
+        ObjectMapper mapper = new ObjectMapper();
+
+        return mapper.writeValueAsString(database);
+    }
 
 
+    public void apiUpdateProject(ProjectDataEntity projectData) {
+        Timestamp dateOFEdit = new Timestamp(new java.util.Date().getTime());
+
+        projectData.setDateOfLastEdit(dateOFEdit);
+        projectDAO.update(projectData);
+    }
 }

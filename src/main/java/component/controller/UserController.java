@@ -3,6 +3,8 @@ package component.controller;
 import component.service.UserService;
 import entity.UserEntity;
 import javassist.expr.NewArray;
+import org.codehaus.jackson.JsonGenerationException;
+import org.codehaus.jackson.map.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -40,16 +42,13 @@ public class UserController {
     public String listUsers(Map<String, Object> model) {
 
         model.put("userList", userService.getAllUsers());
-
         return "userListView";
-
     }
 
     @RequestMapping(value = "/{uid}", method= RequestMethod.GET, produces="text/html")
     public String getUserById(@PathVariable Integer uid, Map<String, Object> model) {
 
         model.put("userEntity", userService.getById(uid));
-
         return "showUserProfile";
     }
 
@@ -57,13 +56,19 @@ public class UserController {
 
     @RequestMapping(method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
-    public @ResponseBody UserEntity apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException {
+    public @ResponseBody Object apiRegister(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) throws BindException, IOException {
         if(bindingResult.hasErrors()) {
-            throw new BindException(bindingResult);
-        }
-        else {
-            return userService.createNewUserAndAuthenticate(userEntity, request, false);
-        }
+
+            return "NotAllRequiredFields";
+        } else {
+            if(userService.checkIfExist(userEntity.getEmail())) {
+                return "EmailAlreadyTaken";
+            } else {
+                ObjectMapper mapper = new ObjectMapper();
+
+                return mapper.writeValueAsString(userService.createNewUserAndAuthenticate(userEntity, request, false));
+            }
+       }
     }
 
     @RequestMapping(value="/check", method = RequestMethod.POST)

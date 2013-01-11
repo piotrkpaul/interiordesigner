@@ -35,6 +35,14 @@ public class HomeController {
         return "homeScreen";
     }
 
+    @RequestMapping({"/api"})
+    public String apiDocumentation(Map<String, Object> model) {
+        model.put("pageHeading", "RESTful API");
+        model.put("pageLead", "Dokumentacja webapi naszej aplikacji");
+        return "apiDocs";
+    }
+
+    @PreAuthorize("isAnonymous()")
     @RequestMapping({"/logowanie"})
     public String showLoginPage(Map<String, Object> model) {
         return "loginPage";
@@ -43,16 +51,22 @@ public class HomeController {
     /* RESTful custom authorisation */
     @RequestMapping(value="/logowanie", method = RequestMethod.POST)
     @ResponseBody
-    public UserEntity apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
-        return userService.getCredentials(email, password);
-    }
+    public Object apiAuthorize(@RequestParam("username") String email, @RequestParam("password") String password) {
+        UserEntity user = userService.getCredentials(email, password);
 
+        if(user.getEmail()!=null) {
+            return user;
+        } else {
+            return "WrongCredentionals";
+        }
+    }
+    @PreAuthorize("isAnonymous()")
     @RequestMapping(value = "/rejestracja", method = RequestMethod.GET)
     public String showRegisterPage(Model model) {
         model.addAttribute("userEntity", new UserEntity());
         return "registerPage";
     }
-
+    @PreAuthorize("isAnonymous()")
     @RequestMapping(value = "/rejestracja", method = RequestMethod.POST)
     public String formHandler(@Valid UserEntity userEntity, BindingResult bindingResult, HttpServletRequest request) {
         if(bindingResult.hasErrors()) {
