@@ -1,0 +1,47 @@
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+             xmlns:beans="http://www.springframework.org/schema/beans"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xmlns:context="http://www.springframework.org/schema/context"
+             xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+           http://www.springframework.org/schema/security
+           http://www.springframework.org/schema/security/spring-security-3.1.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd">
+
+    <http auto-config="true" use-expressions="true">
+        <form-login login-page="/logowanie"
+                    authentication-failure-url="/logowanie?error=wrong"
+                    default-target-url="/"/>
+        <logout logout-success-url="/" />
+    </http>
+
+
+    <beans:bean id="daoAuthenticationProvider"
+                class="org.springframework.security.authentication.dao.DaoAuthenticationProvider">
+        <beans:property name="userDetailsService" ref="userDetailsService"/>
+    </beans:bean>
+
+    <beans:bean id="authenticationManager"
+                class="org.springframework.security.authentication.ProviderManager">
+        <beans:property name="providers">
+            <beans:list>
+                <beans:ref local="daoAuthenticationProvider" />
+            </beans:list>
+        </beans:property>
+    </beans:bean>
+
+    <beans:bean id="securityExpressionHandler"
+          class="org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler" />
+
+    <global-method-security
+            authentication-manager-ref="authenticationManager"
+            pre-post-annotations="enabled">
+        <expression-handler ref="securityExpressionHandler" />
+    </global-method-security>
+
+    <authentication-manager>
+        <authentication-provider user-service-ref="userDetailsService">
+            <password-encoder hash="sha"/>
+        </authentication-provider>
+    </authentication-manager>
+
+</beans:beans>

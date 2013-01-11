@@ -1,0 +1,96 @@
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd" >
+
+<tiles-definitions>
+
+
+    <!-- General template definitions -->
+    <definition name="singleColumnLayout" template="/WEB-INF/views/front/templates/singleColumnLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="navbar" value="/WEB-INF/views/front/general/navbar.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
+    </definition>
+
+    <definition name="doubleColumnLayout" template="/WEB-INF/views/front/templates/doubleColumnLayout.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="navbar" value="/WEB-INF/views/front/general/navbar.jsp" />
+        <put-attribute name="intro" value="/WEB-INF/views/front/general/intro.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/general/sidebar.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
+    </definition>
+
+    <definition name="projectCreator" template="/WEB-INF/views/front/templates/projectCreator.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="navbar" value="/WEB-INF/views/front/general/navbar.jsp" />
+        <put-attribute name="intro" value="/WEB-INF/views/front/general/intro.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="bottom" value="/WEB-INF/views/front/general/bottom.jsp" />
+    </definition>
+
+    <definition name="loginPage" template="/WEB-INF/views/front/templates/loginPage.jsp">
+        <put-attribute name="head" value="/WEB-INF/views/front/general/head.jsp" />
+        <put-attribute name="content" value="/WEB-INF/views/front/general/login.jsp" />
+    </definition>
+
+
+
+    <!-- Views config -->
+    <definition name="homeScreen" extends="singleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/home.jsp" />
+    </definition>
+    <definition name="registerPage" extends="loginPage">
+        <put-attribute name="content" value="/WEB-INF/views/front/general/register.jsp" />
+    </definition>
+    <definition name="editProfilePage" extends="loginPage">
+        <put-attribute name="content" value="/WEB-INF/views/front/general/editProfilePage.jsp" />
+    </definition>
+    <definition name="errorPage" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/general/errorPage.jsp" />
+    </definition>
+
+
+    <definition name="apiDocs" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/apiDocs.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/apiDocsSidebar.jsp" />
+    </definition>
+
+    <definition name="userListView" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/userList.jsp" />
+    </definition>
+    <definition name="showUserProfile" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/user/userProfile.jsp" />
+    </definition>
+
+    <definition name="catalogDisplayAll" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/catalog/list.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/catalog/catalogSidebar.jsp" />
+    </definition>
+
+    <definition name="catalogDisplayItem" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/catalog/itemView.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/catalog/catalogItemViewSidebar.jsp" />
+    </definition>
+
+    <definition name="projectList" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectList.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/project/projectListSidebar.jsp" />
+    </definition>
+
+    <definition name="projectErrorPage" extends="doubleColumnLayout">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectErrorPage.jsp" />
+        <put-attribute name="sidebar" value="/WEB-INF/views/front/pages/project/projectListSidebar.jsp" />
+    </definition>
+
+    <definition name="projectViewer" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectViewer.jsp" />
+    </definition>
+    <definition name="projectEditor" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectEditor.jsp" />
+    </definition>
+    <definition name="projectCreatorPage" extends="projectCreator">
+        <put-attribute name="content" value="/WEB-INF/views/front/pages/project/projectCreator.jsp" />
+    </definition>
+
+
+</tiles-definitions>

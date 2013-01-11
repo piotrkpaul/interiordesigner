@@ -56,7 +56,7 @@ public class ProjectController {
         }
         else {
             model.put("error", "Brak projektów w bazie.");
-            return "redirect:/project";
+            return "projectErrorPage";
         }
     }
 
@@ -198,6 +198,8 @@ public class ProjectController {
         model.put("pageLead", "Projekty stworzone przez Ciebie w naszym systemie");
         return "projectList";
     }
+
+
 
     @RequestMapping(value = "/user/{id}", method = RequestMethod.GET, produces="text/html")
     public String showUserProjects(@PathVariable Integer id, Map<String, Object> model, Principal principal) {
