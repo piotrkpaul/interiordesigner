@@ -295,7 +295,7 @@ public class ProjectController {
         }
     }
 
-    @RequestMapping(value ="/", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
+    @RequestMapping(method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object apiCreateProject(@RequestParam("title") String title,
                                 @RequestParam("desc") String description,
