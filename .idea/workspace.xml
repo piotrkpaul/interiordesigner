@@ -3,12 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/jquery.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InteriorDesigner.iws" />
@@ -98,16 +92,25 @@
       <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="28" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
+            <state line="18" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProjectController.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="pom.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="28" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="201" column="2" selection-start="9488" selection-end="9488" vertical-scroll-proportion="0.0">
+            <state line="263" column="100" selection-start="12158" selection-end="12158" vertical-scroll-proportion="0.55773956">
               <folding />
             </state>
           </provider>
@@ -128,15 +131,18 @@
             <state line="127" column="0" selection-start="4294" selection-end="4294" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1357935069000" expanded="true" signature="186:1049" placeholder="{...}" />
+                <marker date="1357935069000" expanded="true" signature="321:1047" placeholder="{...}" />
+                <marker date="1357935069000" expanded="true" signature="431:1039" placeholder="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="289" column="0" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.9322799">
+            <state line="277" column="36" selection-start="5704" selection-end="5704" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -167,10 +173,11 @@
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" />
         <option value="$PROJECT_DIR$/src/main/java/component/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
       </list>
     </option>
   </component>
@@ -964,34 +971,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="1493" selection-end="1493" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="201" column="2" selection-start="9488" selection-end="9488" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="24" column="10" selection-start="1125" selection-end="1125" vertical-scroll-proportion="-15.0">
@@ -1004,13 +983,44 @@
         <state line="127" column="0" selection-start="4294" selection-end="4294" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1357935069000" expanded="true" signature="186:1049" placeholder="{...}" />
+            <marker date="1357935069000" expanded="true" signature="321:1047" placeholder="{...}" />
+            <marker date="1357935069000" expanded="true" signature="431:1039" placeholder="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="289" column="0" selection-start="5905" selection-end="5905" vertical-scroll-proportion="0.9322799">
+        <state line="277" column="36" selection-start="5704" selection-end="5704" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="28" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="263" column="100" selection-start="12158" selection-end="12158" vertical-scroll-proportion="0.55773956">
           <folding />
         </state>
       </provider>

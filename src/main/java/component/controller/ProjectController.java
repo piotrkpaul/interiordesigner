@@ -261,7 +261,7 @@ public class ProjectController {
     /*
      Api mapping
      */
-    @RequestMapping(value ="/", method = RequestMethod.GET, produces="application/json")
+    @RequestMapping(value ="/", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object getProjectList(@RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
         UserEntity userEntity = userService.getCredentials(email, password);
@@ -274,7 +274,7 @@ public class ProjectController {
 
     }
 
-    @RequestMapping(value ="/{id}", method = RequestMethod.GET, produces="application/json")
+    @RequestMapping(value ="/{id}", method = RequestMethod.GET, produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object getProjectData(@PathVariable Integer id, @RequestParam("username") String email, @RequestParam("password") String password) throws IOException {
         UserEntity userEntity = userService.getCredentials(email, password);
@@ -295,7 +295,7 @@ public class ProjectController {
         }
     }
 
-    @RequestMapping(value ="/", method = RequestMethod.POST, produces="application/json")
+    @RequestMapping(value ="/", method = RequestMethod.POST, produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object apiCreateProject(@RequestParam("title") String title,
                                 @RequestParam("desc") String description,
@@ -340,7 +340,7 @@ public class ProjectController {
         }
     }
 
-    @RequestMapping(value ="/{id}", method = RequestMethod.PUT, produces="application/json")
+    @RequestMapping(value ="/{id}", method = RequestMethod.PUT, produces="application/json;charset=UTF-8")
     @ResponseBody
     public Object apiUpdateProject(@PathVariable("id") Integer id,
                                    @RequestParam(value = "title", required=false) String title,
