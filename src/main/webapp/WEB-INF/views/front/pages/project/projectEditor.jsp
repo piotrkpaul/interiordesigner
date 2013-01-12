@@ -15,7 +15,7 @@
     <div class="form-actions">
         <div class="btn-group">
             <a class="btn btn-success btn-small" id="addFurnitureItem" data-toggle="modal" href="#furnitureItemList"><i
-                    class="icon-plus icon-white"></i> Dodaj mebel</a>
+                    class="icon-plus icon-white items-tab"></i> Dodaj mebel</a>
             <input type="submit" class="btn btn-primary btn-small" value="Zapisz"/>
             <a href="${pageContext.request.contextPath}/project" class="btn btn-small btn-inverse">Powrót</a>
         </div>
@@ -69,6 +69,9 @@
       $(document).on('click', '.items-tab', function(){
         var _this = $(this);
         var itemsCategory = _this.attr("href").replace("#", "");
+          if(itemsCategory == "furnitureItemList") {
+              itemsCategory = "wardrobes";
+          }
         if($("#" + itemsCategory).html() == "") {
           $.ajax({
               type:"GET",
