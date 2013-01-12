@@ -225,7 +225,7 @@
                 </tr>
                 <tr>
                     <td class="bold">uri</td>
-                    <td>/project/</td>
+                    <td>/project</td>
                 </tr>
                 <tr>
                     <td class="bold">Return Type</td>

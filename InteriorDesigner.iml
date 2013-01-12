@@ -13,7 +13,9 @@
     </facet>
     <facet type="hibernate" name="Hibernate">
       <configuration>
-        <datasource-map />
+        <datasource-map>
+          <unit-entry name="sessionFactory" value="dataSource" />
+        </datasource-map>
       </configuration>
     </facet>
     <facet type="Spring" name="Spring">

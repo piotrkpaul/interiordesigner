@@ -71,6 +71,16 @@ public class FurnitureController {
         }
     }
 
+    @RequestMapping(value = "/category/{name}", method = RequestMethod.GET, produces = "application/json")
+    @ResponseBody
+    public void apiGetCategory(@PathVariable String name, HttpServletResponse response) throws IOException {
+        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html");
+
+        ObjectMapper mapper = new ObjectMapper();
+        response.getWriter().write(mapper.writeValueAsString(furnitureService.getByCategory(name)));
+    }
+
     @RequestMapping(value = "/{id}", method = RequestMethod.POST, produces = "application/json")
     @ResponseBody
     public void apiGetItem(@PathVariable String id, HttpServletResponse response) throws IOException {

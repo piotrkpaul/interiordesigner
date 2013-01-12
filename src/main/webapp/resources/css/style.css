@@ -279,7 +279,6 @@ section #accordion .ui-accordion-content .btn-group .btn {
 #objectList .furnitureItem .height, #objectList .furnitureItem .width {
     display: none;
 }
-
 .furniture {
     width: 30px;
     outline: 1px dashed #000;
@@ -287,4 +286,36 @@ section #accordion .ui-accordion-content .btn-group .btn {
     background: #E4E4E4;
 }
 
+/* Dodawanie mebla */
+.container .modal {
+    width: 750px;
+    left: 40%
+}
+.modal .f_itemList {
+    list-style-type: none;
+}
+.modal .f_itemList .f_item {
+    float: left;
+    font-size: 11px;
+    width: 123px;
+    padding: 7px;
+    margin: 7px 5px 7px 0;
+    overflow: hidden;
+}
+.modal .f_itemList .f_item:hover {
+    outline: 1px solid rgb(213, 213, 213);
+}
+.modal .f_itemList .f_item-name{
+    display: block;
+    height: 37px;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 12px;
+}
+.modal.f_itemList .f_item-price {
+    font-weight: bold;
+}
+.modal .f_itemList .f_item .f_item-id {
+    display: none;
+}
 
