@@ -12,8 +12,15 @@
 </blockquote>
 <c:if test="${principal == p.ownerId}">
     <div class="form-actions">
-        <a class="btn btn-small btn-success" href="${pageContext.request.contextPath}/project/edit/${projectDataEntity.id}">Edytuj</a>
-        <a class="btn btn-small btn-danger" href="${pageContext.request.contextPath}/project/delete/${projectDataEntity.id}">Usuń</a>
+        <div class="btn-group">
+            <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomOut"><i class="icon-resize-small icon-white"></i>Oddal</button>
+            <button type="button" class="btn btn-small btn-primary zoomButton" id="normalSize">100%</button>
+            <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomIn"><i class="icon-resize-full icon-white"></i>Powiększ</button>
+        </div>
+        <div class="right">
+            <a class="btn btn-small btn-success" href="${pageContext.request.contextPath}/project/edit/${projectDataEntity.id}">Edytuj</a>
+            <a class="btn btn-small btn-danger" href="${pageContext.request.contextPath}/project/delete/${projectDataEntity.id}">Usuń</a>
+        </div>
     </div>
 </c:if>
 <div id="creator">

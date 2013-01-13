@@ -13,9 +13,19 @@
     <br/>
 
     <div class="form-actions">
-        <div class="btn-group">
+        <div class="left">
             <a class="btn btn-success btn-small items-tab" id="addFurnitureItem" data-toggle="modal" href="#furnitureItemList"><i
                     class="icon-plus icon-white"></i> Dodaj mebel</a>
+            <a href="#" class="btn btn-small" id="createWall"><i class="icon-minus icon-whte"></i> Dodaj ścianę</a>
+
+            <div class="btn-group">
+                <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomOut"><i class="icon-resize-small icon-white"></i>Oddal</button>
+                <button type="button" class="btn btn-small btn-primary zoomButton" id="normalSize">100%</button>
+                <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomIn"><i class="icon-resize-full icon-white"></i>Powiększ</button>
+
+            </div>
+        </div>
+        <div class="right">
             <input type="submit" class="btn btn-primary btn-small" value="Zapisz"/>
             <a href="${pageContext.request.contextPath}/project" class="btn btn-small btn-inverse">Powrót</a>
         </div>
@@ -47,14 +57,30 @@
     <div class="modal-body">
         <div class="tabbable"> <!-- Only required for left/right tabs -->
             <div class="tab-content">
-                <div class="tab-pane active" id="wardrobes"></div>
-                <div class="tab-pane" id="chairs"></div>
-                <div class="tab-pane" id="tables"></div>
-                <div class="tab-pane" id="sofas"></div>
-                <div class="tab-pane" id="beds"></div>
-                <div class="tab-pane" id="agd"></div>
-                <div class="tab-pane" id="dresser"></div>
-                <div class="tab-pane" id="cabinet"></div>
+                <div class="tab-pane active" id="wardrobes">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="chairs">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="tables">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="sofas">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="beds">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="agd">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="dresser">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
+                <div class="tab-pane" id="cabinet">
+                    <div class="listLoadingActivity">Proszę czekać, trwa ładowanie <img src="${pageContext.request.contextPath}/resources/img/ActivityIndicator.gif" class="activityIndicator" /></div>
+                </div>
             </div>
         </div>
     </div>
@@ -72,7 +98,7 @@
           if(itemsCategory == "furnitureItemList") {
               itemsCategory = "wardrobes";
           }
-        if($("#" + itemsCategory).html() == "") {
+        if($("#" + itemsCategory).children(".listLoadingActivity").length) {
           $.ajax({
               type:"GET",
               url:"../../catalog/category/" + itemsCategory
@@ -90,6 +116,7 @@
                       });
 
                       htmlCode+="</ul>";
+                      $("#" + itemsCategory).children(".listLoadingActivity").remove();
                       $("#" + itemsCategory).append(htmlCode);
           });
         } else {
@@ -135,4 +162,8 @@
             _parent.append("<div class='f_rotate new'></div>");
         });
     });
+
+    function countTotalPrice(){
+
+    }
 </script>

@@ -1,6 +1,12 @@
 .bold {
     font-weight: bold;
 }
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
 .param-info {
     width: 15%;
 }
@@ -200,8 +206,10 @@ section #accordion .ui-accordion-content .btn-group .btn {
     text-align: center;
 }
 .wall .wall-height {
-    position: relative;
-    left: 10px;
+    position: absolute;
+    left: -18px;
+    width: 66px;
+    top: 44%;
     /* for firefox, safari, chrome, etc. */
     -webkit-transform: rotate(-90deg);
     -moz-transform: rotate(-90deg);
@@ -211,6 +219,15 @@ section #accordion .ui-accordion-content .btn-group .btn {
 .wall .wall-width {
     position: relative;
     top: 10px;
+}
+.listLoadingActivity {
+    width: 350px;
+    margin: 40px auto;
+    font-size: 16px;
+}
+.listLoadingActivity img {
+    margin-left: 20px;
+    vertical-align: middle;
 }
 .f_width {
     position: absolute;
