@@ -226,7 +226,7 @@ section #accordion .ui-accordion-content .btn-group .btn {
     font-size: 16px;
 }
 .listLoadingActivity img {
-    margin-left: 20px;
+    margin-left: 20px; width: 26px; height: 26px;
     vertical-align: middle;
 }
 .f_width {

@@ -101,7 +101,7 @@
         if($("#" + itemsCategory).children(".listLoadingActivity").length) {
           $.ajax({
               type:"GET",
-              url:"../../catalog/category/" + itemsCategory
+              url:"${pageContext.request.contextPath}/catalog/category/" + itemsCategory
           }).done(function (msg) {
                       var furnitureData = JSON.parse(msg);
                       var htmlCode = '<ul class="f_itemList">';

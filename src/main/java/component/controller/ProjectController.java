@@ -191,9 +191,11 @@ public class ProjectController {
     @RequestMapping(value = "/user", method = RequestMethod.GET, produces="text/html")
     public String showCurrentUserProjects(Map<String, Object> model, Principal principal) {
 
-        model.put("projectList", projectService.getProjectsByUser(principal.getName()));
         if(principal!=null) {
             String userName = principal.getName();
+            System.out.print(userName);
+            List<ProjectDataEntity> projectList = projectService.getProjectsByUser(userName);
+            model.put("projectList", projectList);
             model.put("principal", userName);
         }
         model.put("pageHeading", "Twoje projekty");
@@ -217,24 +219,38 @@ public class ProjectController {
 
     @PreAuthorize("hasRole('ROLE_USER')")
     @RequestMapping(value = "/create", method = RequestMethod.GET, produces="text/html")
-    public String createProject(Model model) {
-        model.addAttribute("pageHeading", "Kreator projektu");
-        model.addAttribute("pageLead", "Stwórz projekt swojego mieszkania");
-        model.addAttribute("furnitureList", furnitureService.getByCategory("beds"));
-        model.addAttribute("projectDataEntity", new ProjectDataEntity());
-        return "projectCreatorPage";
+    public String createProject(Map<String, Object> model, Principal principal) {
+        model.put("pageHeading", "Kreator projektu");
+        model.put("pageLead", "Stwórz projekt swojego mieszkania");
+        model.put("projectDataEntity", new ProjectDataEntity());
+        return "projectEditor";
     }
 
     @PreAuthorize("hasRole('ROLE_USER')")
-    @RequestMapping(value = "/create", method = RequestMethod.POST)
-    public String createProjectFormHandler(@Valid ProjectDataEntity projectDataEntity, BindingResult bindingResult, Principal principal) {
+    @RequestMapping(value = {"/create"}, method = RequestMethod.POST, produces="text/html")
+    public String processCreateProject(@Valid ProjectDataEntity projectDataEntity, BindingResult bindingResult,  Principal principal, HttpServletRequest request) {
+
         if(bindingResult.hasErrors()) {
-            return "projectCreatorPage";
+            return "projectEditor";
         }
         else {
-            projectDataEntity.setOwnerId(principal.getName());
-            projectService.createProject(projectDataEntity);
-            return "redirect:/project/user" + projectDataEntity.getId();
+            ProjectDataEntity projectData = new ProjectDataEntity();
+            projectData.setTitle(projectDataEntity.getTitle());
+            projectData.setProjectDescription(projectDataEntity.getProjectDescription());
+            projectData.setOwnerId(principal.getName());
+            if (projectData.getDataWalls() == null){
+                projectData.setDataWalls("[]");
+            } else {
+                projectData.setDataWalls(projectData.getDataWalls());
+            }
+
+            if(projectDataEntity.getDataObjects() == null) {
+                projectData.setDataObjects("[]");
+            } else {
+                projectData.setDataObjects(projectDataEntity.getDataObjects());
+            }
+
+            return "redirect:/project/" + projectService.createProject(projectData);
         }
     }
 

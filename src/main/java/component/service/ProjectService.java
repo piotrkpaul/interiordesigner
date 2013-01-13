@@ -22,13 +22,14 @@ public class ProjectService {
     public ProjectDAO projectDAO;
 
     @Secured("ROLE_USER")
-    public void createProject(ProjectDataEntity projectEntity) {
+    public Integer createProject(ProjectDataEntity projectEntity) {
 
         Timestamp dateOFCreation = new Timestamp(new java.util.Date().getTime());
         projectEntity.setDateOfCreation(dateOFCreation);
         projectEntity.setDateOfLastEdit(dateOFCreation);
 
         projectDAO.add(projectEntity);
+        return projectDAO.getIdAfterAdd(projectEntity.getOwnerId(), projectEntity.getDateOfCreation());
     }
 
     @Secured("ROLE_USER")
@@ -47,7 +48,7 @@ public class ProjectService {
 
     public List<ProjectDataEntity> getProjectsByUser(String userId) {
 
-        return projectDAO.getAllByUser(userId);
+        return projectDAO.getListByUser(userId);
     }
 
     public List<ProjectDataEntity> getAllProjects() {
