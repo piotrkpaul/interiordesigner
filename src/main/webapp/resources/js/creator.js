@@ -59,10 +59,10 @@ $(function() {
 
     $(".movable").draggable({ containment: "#projectDataViewer", obstacle: ".obstacle", preventCollision: true });
 
-    $('.movable').on('mousedown', function(e) {
+    $(document).on('mousedown', '.movable', function(e) {
         $(this).removeClass('obstacle');
     });
-    $('.movable').on('mouseup', function(e) {
+    $(document).on('mouseup', '.movable', function(e) {
         $(this).addClass('obstacle');
     });
 

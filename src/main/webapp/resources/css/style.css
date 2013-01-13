@@ -230,6 +230,18 @@ section #accordion .ui-accordion-content .btn-group .btn {
 .f_id {
     display: none;
 }
+.movable .f_delete {
+    width: 25px; height: 25px;
+    position: absolute;
+    top: -12px; right: -12px;
+    display: none;
+    background: url("../img/delete_icon.png") no-repeat;
+
+}
+.movable:hover .f_delete{
+    display: block;
+    z-index: 50;
+}
 #creator {
     width: 100%;
     height: 550px;

@@ -14,8 +14,8 @@
 
     <div class="form-actions">
         <div class="btn-group">
-            <a class="btn btn-success btn-small" id="addFurnitureItem" data-toggle="modal" href="#furnitureItemList"><i
-                    class="icon-plus icon-white items-tab"></i> Dodaj mebel</a>
+            <a class="btn btn-success btn-small items-tab" id="addFurnitureItem" data-toggle="modal" href="#furnitureItemList"><i
+                    class="icon-plus icon-white"></i> Dodaj mebel</a>
             <input type="submit" class="btn btn-primary btn-small" value="Zapisz"/>
             <a href="${pageContext.request.contextPath}/project" class="btn btn-small btn-inverse">Powrót</a>
         </div>
@@ -32,7 +32,7 @@
      aria-hidden="true">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel">Modal header</h3>
+        <h3 id="myModalLabel">Dodaj mebel do projektu</h3>
         <ul class="nav nav-tabs">
             <li class="active"><a href="#wardrobes" class="items-tab" data-toggle="tab">Szafy</a></li>
             <li><a href="#chairs" class="items-tab" data-toggle="tab">Krzesła</a></li>
@@ -96,5 +96,26 @@
             console.log("Already on list");
         }
       });
+
+      $(document).on('click', ".f_item", function() {
+          var p = $(this);
+          console.log($(this).children(".f_id"));
+          var chosenFurniture = "<div class='furniture movable obstacle just-added' style='position:absolute; width:"
+                + $(this).children(".f_item-size").children(".f_item-height").text() + "px; height:"
+                + $(this).children(".f_item-size").children(".f_item-width").text() + "px; top: 100px; left: 150px;'>"
+                + "<span class='f_id'>" + $(this).children(".f_item-id").text() + "</span>"
+                + "<span class='f_width'>" + $(this).children(".f_item-size").children(".f_item-width").text()  + " cm</span>"
+                + "<span class='f_height'>" + $(this).children(".f_item-size").children(".f_item-height").text() + " cm</span>"
+                + "</div>";
+          $("#projectDataViewer").append(chosenFurniture)
+          $(".just-added").draggable({ containment: "#projectDataViewer", obstacle: ".obstacle", preventCollision: true }).removeClass("just-added");
+          chosenFurniture = null;
+          $('#furnitureItemList').modal('hide')
+      });
+
+        $(document).on('click', '.f_delete', function(){
+           $(this).parent('.furniture').remove();
+            console.log("klick");
+        });
     });
 </script>
