@@ -106,6 +106,8 @@
                 + "<span class='f_id'>" + $(this).children(".f_item-id").text() + "</span>"
                 + "<span class='f_width'>" + $(this).children(".f_item-size").children(".f_item-width").text()  + " cm</span>"
                 + "<span class='f_height'>" + $(this).children(".f_item-size").children(".f_item-height").text() + " cm</span>"
+                + "<div class='f_delete'></div>"
+                + "<div class='f_rotate'></div>"
                 + "</div>";
           $("#projectDataViewer").append(chosenFurniture)
           $(".just-added").draggable({ containment: "#projectDataViewer", obstacle: ".obstacle", preventCollision: true }).removeClass("just-added");
@@ -115,7 +117,22 @@
 
         $(document).on('click', '.f_delete', function(){
            $(this).parent('.furniture').remove();
-            console.log("klick");
+        });
+        $(document).on('click', '.f_rotate', function(){
+            console.log("klick" + $(this));
+            var _this = $(this);
+            var _parent = _this.parent('.furniture');
+            var width = _parent.css('width');
+            var height = _parent.css('height');
+
+                _parent.css('width', height);
+                _parent.css('height', width);
+
+            _parent.children('.f_width').html(height);
+            _parent.children('.f_height').html(width);
+
+            _this.remove();
+            _parent.append("<div class='f_rotate new'></div>");
         });
     });
 </script>

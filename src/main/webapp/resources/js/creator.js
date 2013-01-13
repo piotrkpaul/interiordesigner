@@ -29,30 +29,6 @@ $(document).on('click', '.furniture', function (event) {
     }
 });
 
-// Edytor przedmiotu
-$(document).on('click', '.movable', function (event) {
-    var id = $(this).find(".f_id")[0].innerText;
-    var furniture = $(this);
-    if (furniture.attr("data-original-title") == null) {
-        $.ajax({
-            type:"POST",
-            url:"../../catalog/" + id
-        }).done(function (msg) {
-                var furnitureData = JSON.parse(msg);
-                var settings = '<div class="deleteObject" class="btn btn-danger">Kasuj</div>' +
-                    '<div class="rotateObject" class="btn">Obróć</div><br />';
-                var itemDetails = '<img src="' + furnitureData.itemImageUrl + '" />' +
-                    '<b>ID: </b>' + furnitureData.id +
-                    '<br /><b>Kategoria: </b>' + furnitureData.itemCategory +
-                    '<br /><b>Cena: </b>' + furnitureData.itemPrice + ' zł<br />';
-
-                furniture.attr("data-original-title", furnitureData.itemName);
-
-                furniture.attr("data-content", settings + itemDetails);
-                furniture.clickover({ html:true}).clickover();
-            });
-    }
-});
 
 
 $(function() {

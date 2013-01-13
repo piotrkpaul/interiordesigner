@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/delete_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
@@ -12,15 +12,14 @@
     <ignored path="InteriorDesigner.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358006835606" ignored="false" />
-    <file path="$PROJECT_DIR$/.idea/misc.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1354982472102" ignored="false" />
     <file path="/persistanceConfig.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357725552033" ignored="false" />
     <file path="/ProjectController.java" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357935010525" ignored="false" />
     <file path="/projectViewer.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357725846370" ignored="false" />
-    <file path="/style.css" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358042049065" ignored="false" />
+    <file path="/style.css" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358082868655" ignored="false" />
     <file path="/creator.js" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358040527390" ignored="false" />
     <file path="/navbar.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357903733566" ignored="false" />
     <file path="/applicationContext.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357915365353" ignored="false" />
-    <file path="/projectEditor.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358041637470" ignored="false" />
+    <file path="/projectEditor.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358082413270" ignored="false" />
     <file path="/FurnitureController.java" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358003721578" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -91,7 +90,7 @@
           <file leaf-file-name="ProjectController.java" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="134" column="51" selection-start="6313" selection-end="6321" vertical-scroll-proportion="0.0">
+                <state line="135" column="28" selection-start="6359" selection-end="6391" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -145,9 +144,9 @@
           <file leaf-file-name="projectEditor.jsp" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="110" column="56" selection-start="5895" selection-end="5895" vertical-scroll-proportion="-14.375">
+                <state line="134" column="52" selection-start="6866" selection-end="6866" vertical-scroll-proportion="-52.916668">
                   <folding>
-                    <marker date="1358041639000" expanded="false" signature="5159:5184" placeholder="..." />
+                    <marker date="1358082413000" expanded="false" signature="5159:5184" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -156,25 +155,25 @@
           <file leaf-file-name="creator.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="0" selection-start="1053" selection-end="2149" vertical-scroll-proportion="0.0">
+                <state line="31" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="236" column="18" selection-start="4941" selection-end="4941" vertical-scroll-proportion="0.0">
+                <state line="181" column="13" selection-start="3876" selection-end="3876" vertical-scroll-proportion="0.38356164">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/.gitignore">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.04731861">
+                <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
                   <folding />
                 </state>
               </provider>
@@ -189,7 +188,7 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state line="78" column="34" selection-start="3827" selection-end="3827" vertical-scroll-proportion="-33.458332">
                   <folding>
-                    <marker date="1358041639000" expanded="true" signature="5159:5184" placeholder="..." />
+                    <marker date="1358082413000" expanded="true" signature="5159:5184" placeholder="..." />
                   </folding>
                 </state>
               </provider>
@@ -279,11 +278,11 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/apiDocs.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/component/controller/FurnitureController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
+        <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
       </list>
     </option>
   </component>
@@ -349,6 +348,106 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -748,20 +847,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -779,13 +864,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="20" column="80" selection-start="1347" selection-end="1359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/service/FurnitureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -823,39 +901,60 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="51" selection-start="6313" selection-end="6321" vertical-scroll-proportion="0.0">
+        <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/HomeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1053" selection-end="2149" vertical-scroll-proportion="0.0">
+        <state line="67" column="89" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/service/FurnitureService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/dao/hibernate/ProjectDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="13" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="28" selection-start="6359" selection-end="6391" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="56" selection-start="5895" selection-end="5895" vertical-scroll-proportion="-14.375">
+        <state line="134" column="52" selection-start="6866" selection-end="6866" vertical-scroll-proportion="-52.916668">
           <folding>
-            <marker date="1358041639000" expanded="false" signature="5159:5184" placeholder="..." />
+            <marker date="1358082413000" expanded="false" signature="5159:5184" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="236" column="18" selection-start="4941" selection-end="4941" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.04731861">
+        <state line="181" column="13" selection-start="3876" selection-end="3876" vertical-scroll-proportion="0.38356164">
           <folding />
         </state>
       </provider>

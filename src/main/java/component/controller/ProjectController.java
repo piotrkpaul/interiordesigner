@@ -133,6 +133,7 @@ public class ProjectController {
                             + "<span class='f_width'>" + p.getWidth() + " cm</span>"
                             + "<span class='f_height'>" + p.getHeight() + " cm</span>"
                             + "<div class='f_delete'></div>"
+                            + "<div class='f_rotate'></div>"
                             + "</div>";
                 }
 
