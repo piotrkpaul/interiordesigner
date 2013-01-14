@@ -72,7 +72,7 @@ public class ProjectController {
 
             String furnitureHtml = "";
             for(FurnitureItem p : furnitureList) {
-                furnitureHtml += "<div class='furniture' style='position:absolute; width:"
+                furnitureHtml += "<div class='furniture furniture-preview' style='position:absolute; width:"
                         + p.getWidth() + "px; height:"
                         + p.getHeight() + "px; top:"
                         + p.getY() + "px; left:"

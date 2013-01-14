@@ -7,7 +7,7 @@
  });*/
 
 //Opis przedmiotu
-$(document).on('click', '.furniture', function (event) {
+$(document).on('click', '.furniture-preview', function (event) {
     var id = $(this).find(".f_id")[0].innerText;
     var furniture = $(this);
     if (furniture.attr("data-original-title") == null) {
