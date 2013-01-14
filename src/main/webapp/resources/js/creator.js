@@ -35,6 +35,18 @@ $(function () {
     var zoomSize = 3;
 
     $(".movable").draggable({ containment:"#projectDataViewer", obstacle:".obstacle", preventCollision:true });
+    $(".scalable-we").resizable({
+        handles: 'w,e',
+        resize: function( event, ui ) {
+            $(this).children("span").text($(this).css("width").replace("px", " cm"));
+        }
+    });
+    $(".scalable-ns").resizable({ handles: 'n,s',
+        resize: function( event, ui ) {
+            $(this).children("span").text($(this).css("height").replace("px", " cm"));
+        }
+    });
+
     $(document).on('mousedown', '.movable', function (e) {
         $(this).removeClass('obstacle');
     });
@@ -130,6 +142,7 @@ $(function () {
         var furnitureList = [];
         if(zoomSize != 3) {
             var delta = 3 - zoomSize;
+            var multiplier = 1;
             if (delta < 0) {
                 multiplier = (1/2)/(delta * (-1));
                 zoomSize = 3;
@@ -151,27 +164,9 @@ $(function () {
                 // For every wall item, we change only one dimmension
                 if(obj.hasClass('wall')) {
                     if(parseInt(_width, 10) < parseInt(_height, 10) ) {
-                        obj.css("height", parseInt(_height * multiplier, 10) + "px");
-                        if (multiplier != 2) {
-                            if (_actionTrigger == "normalSize") {
-                                obj.css("width", "3px");
-                            } else {
-                                obj.css("width", parseInt(_width, 10)-1 + "px");
-                            }
-                        } else {
-                            obj.css("width", parseInt(_width, 10)+1 + "px");
-                        }
+                        obj.css("height", parseInt(_height * multiplier, 10) + "px").css("width", "3px");
                     } else {
-                        obj.css("width", parseInt(_width * multiplier, 10) + "px");
-                        if (multiplier != 2) {
-                            if (_actionTrigger == "normalSize") {
-                                obj.css("height", "3px");
-                            } else {
-                                obj.css("height", parseInt(_height, 10)-1 + "px");
-                            }
-                        } else {
-                            obj.css("height", parseInt(_height, 10)+1 + "px");
-                        }
+                        obj.css("width", parseInt(_width * multiplier, 10) + "px").css("height", "3px");
                     }
                 } else {
                     obj.css("width", parseInt(_width * multiplier, 10) + "px");

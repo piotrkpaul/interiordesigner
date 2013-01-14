@@ -141,11 +141,11 @@ public class ProjectController {
                 for(WallItem p : wallsList) {
                     if(p.getX2()-p.getX1() <= p.getY2()-p.getY1()) {
                         Integer height = p.getY2() - p.getY1();
-                        wallsHtml += "<div class='wall editable obstacle' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-height'>" + height + " cm</span></div>";
+                        wallsHtml += "<div class='wall movable scalable-ns obstacle' style='position:absolute; width: 3px; height: " + height +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-height'>" + height + " cm</span></div>";
 
                     } else {
                         Integer width = p.getX2() - p.getX1();
-                        wallsHtml += "<div class='wall editable obstacle' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-width'>" + width + " cm</span></div>";
+                        wallsHtml += "<div class='wall movable scalable-we obstacle' style='position:absolute; height: 3px; width: " + width +"px; top:" + p.getY1() + "px; left:" + p.getX1() + "px;'><span class='wall-width'>" + width + " cm</span></div>";
 
                     }
                 }

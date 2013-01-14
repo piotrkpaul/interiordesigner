@@ -155,7 +155,7 @@
                         x1 = event.pageX - $(this).offset().left;
                         y1 = event.pageY - $(this).offset().top;
 
-                        var wall = "<div class='wall editable obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
+                        var wall = "<div class='wall scalable obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
 
                         var i=0;
                         $("#projectDataViewer").append(wall);
@@ -227,8 +227,8 @@
                 _parent.css('width', height);
                 _parent.css('height', width);
 
-            _parent.children('.f_width').html(height);
-            _parent.children('.f_height').html(width);
+            _parent.children('.f_width').html(height.replace("px", " cm"));
+            _parent.children('.f_height').html(width.replace("px", " cm"));
         });
     });
 </script>
