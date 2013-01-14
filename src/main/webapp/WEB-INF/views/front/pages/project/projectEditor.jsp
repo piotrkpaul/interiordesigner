@@ -149,29 +149,69 @@
 
             if(clickCounter < 2) {
                 $(document).on('click', '#projectDataViewer', function(event){
-                    if(clickCounter == 0) {
+                    clickCounter++;
+                    var _event_click = event;
+                    if(clickCounter == 1) {
                         x1 = event.pageX - $(this).offset().left;
                         y1 = event.pageY - $(this).offset().top;
-                    } else if (clickCounter == 1) {
-                        x2 = event.pageX - $(this).offset().left;
-                        y2 = event.pageY - $(this).offset().top;
 
-                        var _wall_width = Math.abs(Math.max(x1,x2) - Math.min(x1,x2));
-                        var _wall_height = Math.abs(Math.max(y1,y2) - Math.min(y1,y2));
+                        var wall = "<div class='wall editable obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
 
-                        if(_wall_width < _wall_height){
-                            var wall = "<div class='wall editable obstacle' style='position:absolute; width: 3px; height: " + _wall_height + "px; top:" + Math.min(y1,y2) + "px; left:" + Math.min(x1,x2) + "px;'><span class='wall-height'>" + _wall_height + " cm</span></div>";
-                            $("#projectDataViewer").append(wall);
-                        } else {
-                            var wall = "<div class='wall editable obstacle' style='position:absolute; height: 3px; width: " + _wall_width +"px; top:" + Math.min(y1,y2) + "px; left:" + Math.min(x1,x2) + "px;'><span class='wall-width'>" + _wall_width + " cm</span></div>";
-                            $("#projectDataViewer").append(wall);
-                        }
+                        var i=0;
+                        $("#projectDataViewer").append(wall);
+
+                        var _this_wall = $("#projectDataViewer .currently");
+
+                        $("#projectDataViewer").on('mousemove', function(event) {
+                            var _event_move = event;
+                            var _delta_x = event.pageX - $(this).offset().left - x1;
+                            var _delta_y = event.pageY - $(this).offset().top - y1;
+
+                            if(clickCounter == 2) {
+                                x2 = event.pageX - $(this).offset().left;
+                                y2 = event.pageY - $(this).offset().top;
+
+                                var _wall_width = Math.abs(Math.max(x1,x2) - Math.min(x1,x2));
+                                var _wall_height = Math.abs(Math.max(y1,y2) - Math.min(y1,y2));
+                                var _wall_top = Math.min(y1,y2);
+                                var _wall_left = Math.min(x1,x2);
+
+                                if(_wall_width < _wall_height){
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("height", _wall_height).css("width", 3);
+                                } else {
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("width", _wall_width).css("height", 3);
+                                }
+
+                                $("#projectDataViewer").removeClass("createWallMode");
+                                _this_wall.removeClass('currently');
+                                $("#projectDataViewer").off();
+
+                            }
+
+                            if (Math.abs(_delta_x) > Math.abs(_delta_y)) {
+                                _this_wall.children('span').addClass("wall-width").removeClass("wall-height");
+                                _this_wall.css("top", y1).css("height", 3);
+                                if(_delta_x<0) {
+                                    _this_wall.css("left", event.pageX - $(this).offset().left).css("width", x1 - (event.pageX - $(this).offset().left));
+                                    _this_wall.children('span').text(x1 - (event.pageX - $(this).offset().left) + " cm");
+                                } else {
+                                    _this_wall.css("left", x1).css("width", _delta_x);
+                                    _this_wall.children('span').text(_delta_x + " cm");
+                                }
+                            } else {
+                                _this_wall.children('span').addClass("wall-height").removeClass("wall-width");
+                                _this_wall.css("left", x1).css("width", 3);
+                                if(_delta_y<0) {
+                                    _this_wall.css("top", event.pageY - $(this).offset().top).css("height", y1 - (event.pageY - $(this).offset().top));
+                                    _this_wall.children('span').text(y1 - (event.pageY - $(this).offset().top) + " cm");
+                                } else {
+                                    _this_wall.css("top", y1).css("height", _delta_y);
+                                    _this_wall.children('span').text(_delta_y + " cm");
+                                }
+                            }
+                        });
                     }
-                    clickCounter++;
                 });
-            } else {
-                $("#projectDataViewer").removeClass("createWallMode");
-                event.off();
             }
             e.preventDefault();
         });
