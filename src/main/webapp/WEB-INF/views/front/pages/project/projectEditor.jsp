@@ -92,7 +92,7 @@
 
 <script>
     $(function(){
-      $(document).on('click', '.items-tab', function(){
+        $(document).on('click', '.items-tab', function(){
         var _this = $(this);
         var itemsCategory = _this.attr("href").replace("#", "");
           if(itemsCategory == "furnitureItemList") {
@@ -119,14 +119,10 @@
                       $("#" + itemsCategory).children(".listLoadingActivity").remove();
                       $("#" + itemsCategory).append(htmlCode);
           });
-        } else {
-            console.log("Already on list");
         }
       });
-
-      $(document).on('click', ".f_item", function() {
+        $(document).on('click', ".f_item", function() {
           var p = $(this);
-          console.log($(this).children(".f_id"));
           var chosenFurniture = "<div class='furniture movable obstacle just-added' style='position:absolute; width:"
                 + $(this).children(".f_item-size").children(".f_item-height").text() + "px; height:"
                 + $(this).children(".f_item-size").children(".f_item-width").text() + "px; top: 100px; left: 150px;'>"
@@ -142,11 +138,47 @@
           $('#furnitureItemList').modal('hide')
       });
 
+        $(document).on('click', '#createWall', function(e){
+
+            var _this = $(this);
+            var _projectArea = $("#projectDataViewer");
+            var clickCounter = 0;
+            var x1, x2, y1, y2 = 0;
+
+            _projectArea.addClass("createWallMode");
+
+            if(clickCounter < 2) {
+                $(document).on('click', '#projectDataViewer', function(event){
+                    if(clickCounter == 0) {
+                        x1 = event.pageX - $(this).offset().left;
+                        y1 = event.pageY - $(this).offset().top;
+                    } else if (clickCounter == 1) {
+                        x2 = event.pageX - $(this).offset().left;
+                        y2 = event.pageY - $(this).offset().top;
+
+                        var _wall_width = Math.abs(Math.max(x1,x2) - Math.min(x1,x2));
+                        var _wall_height = Math.abs(Math.max(y1,y2) - Math.min(y1,y2));
+
+                        if(_wall_width < _wall_height){
+                            var wall = "<div class='wall editable obstacle' style='position:absolute; width: 3px; height: " + _wall_height + "px; top:" + Math.min(y1,y2) + "px; left:" + Math.min(x1,x2) + "px;'><span class='wall-height'>" + _wall_height + " cm</span></div>";
+                            $("#projectDataViewer").append(wall);
+                        } else {
+                            var wall = "<div class='wall editable obstacle' style='position:absolute; height: 3px; width: " + _wall_width +"px; top:" + Math.min(y1,y2) + "px; left:" + Math.min(x1,x2) + "px;'><span class='wall-width'>" + _wall_width + " cm</span></div>";
+                            $("#projectDataViewer").append(wall);
+                        }
+                    }
+                    clickCounter++;
+                });
+            } else {
+                $("#projectDataViewer").removeClass("createWallMode");
+                event.off();
+            }
+            e.preventDefault();
+        });
         $(document).on('click', '.f_delete', function(){
            $(this).parent('.furniture').remove();
         });
         $(document).on('click', '.f_rotate', function(){
-            console.log("klick" + $(this));
             var _this = $(this);
             var _parent = _this.parent('.furniture');
             var width = _parent.css('width');
@@ -157,13 +189,6 @@
 
             _parent.children('.f_width').html(height);
             _parent.children('.f_height').html(width);
-
-            _this.remove();
-            _parent.append("<div class='f_rotate new'></div>");
         });
     });
-
-    function countTotalPrice(){
-
-    }
 </script>

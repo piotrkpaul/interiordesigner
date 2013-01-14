@@ -180,7 +180,7 @@ public class ProjectController {
             ProjectDataEntity projectData = projectService.getProject(id);
             projectData.setTitle(projectDataEntity.getTitle());
             projectData.setProjectDescription(projectDataEntity.getProjectDescription());
-            projectData.setDataWalls(projectData.getDataWalls());
+            projectData.setDataWalls(projectDataEntity.getDataWalls());
             projectData.setDataObjects(projectDataEntity.getDataObjects());
             projectService.updateProject(projectData);
 
@@ -238,11 +238,9 @@ public class ProjectController {
             projectData.setTitle(projectDataEntity.getTitle());
             projectData.setProjectDescription(projectDataEntity.getProjectDescription());
             projectData.setOwnerId(principal.getName());
-            if (projectData.getDataWalls() == null){
-                projectData.setDataWalls("[]");
-            } else {
-                projectData.setDataWalls(projectData.getDataWalls());
-            }
+            System.out.println(projectDataEntity.getDataWalls());
+             projectData.setDataWalls(projectDataEntity.getDataWalls());
+
 
             if(projectDataEntity.getDataObjects() == null) {
                 projectData.setDataObjects("[]");

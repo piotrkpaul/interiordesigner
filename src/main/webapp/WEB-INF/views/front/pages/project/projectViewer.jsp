@@ -12,7 +12,7 @@
 </blockquote>
 <c:if test="${principal == p.ownerId}">
     <div class="form-actions">
-        <div class="btn-group">
+        <div class="btn-group left">
             <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomOut"><i class="icon-resize-small icon-white"></i>Oddal</button>
             <button type="button" class="btn btn-small btn-primary zoomButton" id="normalSize">100%</button>
             <button type="button" class="btn btn-small btn-primary zoomButton" id="zoomIn"><i class="icon-resize-full icon-white"></i>Powiększ</button>
