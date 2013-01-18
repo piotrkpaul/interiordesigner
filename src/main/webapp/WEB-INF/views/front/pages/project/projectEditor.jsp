@@ -155,7 +155,7 @@
                         x1 = event.pageX - $(this).offset().left;
                         y1 = event.pageY - $(this).offset().top;
 
-                        var wall = "<div class='wall scalable obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
+                        var wall = "<div class='wall obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
 
                         var i=0;
                         $("#projectDataViewer").append(wall);
@@ -177,12 +177,27 @@
                                 var _wall_left = Math.min(x1,x2);
 
                                 if(_wall_width < _wall_height){
-                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("height", _wall_height).css("width", 3);
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("height", _wall_height).css("width", 3).addClass("scalable-ns").removeClass("scalable-we");
                                 } else {
-                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("width", _wall_width).css("height", 3);
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("width", _wall_width).css("height", 3).removeClass("scalable-ns").addClass("scalable-we");
                                 }
 
                                 $("#projectDataViewer").removeClass("createWallMode");
+                               if ($("#projectDataViewer .currently").hasClass("scalable-we")) {
+                                   $("#projectDataViewer .currently").resizable({ handles: 'w,e',
+                                   resize: function( event, ui ) {
+                                       $(this).children("span").text($(this).css("width").replace("px", " cm"));
+                                   }
+                               }).draggable({ containment:"#projectDataViewer", obstacle:".obstacle", preventCollision:true });
+                            } else {
+                                $("#projectDataViewer .currently").resizable({
+                                    handles: 'w,e',
+                                    resize: function( event, ui ) {
+                                        $(this).children("span").text($(this).css("height").replace("px", " cm"));
+                                    }
+                                }).draggable({ containment:"#projectDataViewer", obstacle:".obstacle", preventCollision:true });
+                            }
+
                                 _this_wall.removeClass('currently');
                                 $("#projectDataViewer").off();
 
