@@ -2,28 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/templates/printProjectView.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/ActivityIndicator.gif" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/ActivityIndicator.gif" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/delete_icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/delete_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/dao/FurnitureDAOInterface.java" afterPath="$PROJECT_DIR$/src/main/java/component/dao/FurnitureDAOInterface.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/FurnitureitemsEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/FurnitureitemsEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/HomeController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/component/service/ProjectService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/UserController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/UserEntity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/component/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/InteriorDesigner.iml" afterPath="$PROJECT_DIR$/InteriorDesigner.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InteriorDesigner.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -155,10 +135,10 @@
       <file leaf-file-name="projectEditor.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="222" column="109" selection-start="13152" selection-end="13152" vertical-scroll-proportion="0.4224924">
+            <state line="222" column="25" selection-start="13068" selection-end="13068" vertical-scroll-proportion="0.3382353">
               <folding>
-                <marker date="1358693885000" expanded="true" signature="8488:8513" placeholder="..." />
-                <marker date="1358693885000" expanded="true" signature="11562:11585" placeholder="..." />
+                <marker date="1358707550000" expanded="true" signature="8488:8513" placeholder="..." />
+                <marker date="1358707550000" expanded="true" signature="11562:11585" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1125,8 +1105,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1993517" sideWeight="0.6296296" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37037036" sideWeight="0.49675852" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1993517" sideWeight="0.6296296" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37037036" sideWeight="0.49675852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1303,10 +1283,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="222" column="109" selection-start="13152" selection-end="13152" vertical-scroll-proportion="0.4224924">
+        <state line="222" column="25" selection-start="13068" selection-end="13068" vertical-scroll-proportion="0.3382353">
           <folding>
-            <marker date="1358693885000" expanded="true" signature="8488:8513" placeholder="..." />
-            <marker date="1358693885000" expanded="true" signature="11562:11585" placeholder="..." />
+            <marker date="1358707550000" expanded="true" signature="8488:8513" placeholder="..." />
+            <marker date="1358707550000" expanded="true" signature="11562:11585" placeholder="..." />
           </folding>
         </state>
       </provider>
