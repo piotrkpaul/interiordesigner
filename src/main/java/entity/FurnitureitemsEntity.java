@@ -2,10 +2,8 @@ package entity;
 
 import org.hibernate.annotations.Cache;
 import org.hibernate.annotations.CacheConcurrencyStrategy;
-import org.springframework.security.crypto.codec.Base64;
 
 import javax.persistence.*;
-import java.util.Arrays;
 
 /**
  * Created with IntelliJ IDEA.

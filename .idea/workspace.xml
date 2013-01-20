@@ -2,25 +2,45 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/templates/printProjectView.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/ActivityIndicator.gif" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/ActivityIndicator.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/delete_icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/delete_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" afterPath="$PROJECT_DIR$/src/main/webapp/resources/img/rotate_icon.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/dao/FurnitureDAOInterface.java" afterPath="$PROJECT_DIR$/src/main/java/component/dao/FurnitureDAOInterface.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/FurnitureitemsEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/FurnitureitemsEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/HomeController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/HomeController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/service/ProjectService.java" afterPath="$PROJECT_DIR$/src/main/java/component/service/ProjectService.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/component/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/entity/UserEntity.java" afterPath="$PROJECT_DIR$/src/main/java/entity/UserEntity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/component/service/UserService.java" afterPath="$PROJECT_DIR$/src/main/java/component/service/UserService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="InteriorDesigner.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358006835606" ignored="false" />
-    <file path="/persistanceConfig.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357725552033" ignored="false" />
-    <file path="/ProjectController.java" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357935010525" ignored="false" />
-    <file path="/projectViewer.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357725846370" ignored="false" />
+    <file path="/Dummy.txt" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358527805977" ignored="false" />
+    <file path="/persistanceConfig.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358528027535" ignored="false" />
+    <file path="/ProjectController.java" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358528285564" ignored="false" />
+    <file path="/projectViewer.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358530046693" ignored="false" />
     <file path="/style.css" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358082868655" ignored="false" />
     <file path="/creator.js" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358040527390" ignored="false" />
     <file path="/navbar.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357903733566" ignored="false" />
     <file path="/applicationContext.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1357915365353" ignored="false" />
-    <file path="/projectEditor.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358082413270" ignored="false" />
+    <file path="/projectEditor.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358693745950" ignored="false" />
     <file path="/FurnitureController.java" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358003721578" ignored="false" />
+    <file path="/a.dummy" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358234532698" ignored="false" />
+    <file path="/views.xml" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358528422370" ignored="false" />
+    <file path="/head.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358528526152" ignored="false" />
+    <file path="/printProjectView.jsp" changelist="e8cacffb-19b6-4aa7-a33a-64f71e8eb480" time="1358529994394" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +60,6 @@
     <sortChildren value="false" />
   </component>
   <component name="DebuggerManager">
-    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -75,6 +94,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <breakpoint_rules default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
@@ -84,173 +104,94 @@
     <favorites_list name="InteriorDesigner" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="vertical" split-proportion="0.84900284">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="ProjectController.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="135" column="28" selection-start="6359" selection-end="6391" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ProjectDAO.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/dao/hibernate/ProjectDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="19" column="13" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserController.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/UserController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="58" column="129" selection-start="2240" selection-end="2247" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FurnitureService.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/service/FurnitureService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="24" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UserEntity.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserEntity.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="94" column="106" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="HomeController.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/HomeController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="67" column="89" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="projectEditor.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="134" column="52" selection-start="6866" selection-end="6866" vertical-scroll-proportion="-52.916668">
-                  <folding>
-                    <marker date="1358082413000" expanded="false" signature="5159:5184" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="creator.js" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="31" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="181" column="13" selection-start="3876" selection-end="3876" vertical-scroll-proportion="0.38356164">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/.gitignore">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="projectEditor.jsp" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="78" column="34" selection-start="3827" selection-end="3827" vertical-scroll-proportion="-33.458332">
-                  <folding>
-                    <marker date="1358082413000" expanded="true" signature="5159:5184" placeholder="..." />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FurnitureController.java" pinned="false" current="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/FurnitureController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="80" column="96" selection-start="3416" selection-end="3420" vertical-scroll-proportion="61.933334">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="FurnitureDAO.java" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/component/dao/hibernate/FurnitureDAO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="14" column="13" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="18" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="dispatcher-servlet.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="securityConfig.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="persistanceConfig.xml" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="20" column="80" selection-start="1347" selection-end="1359" vertical-scroll-proportion="0.0">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="ProjectController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="136" column="96" selection-start="6247" selection-end="6253" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="260" column="0" selection-start="5393" selection-end="5598" vertical-scroll-proportion="-4.56">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="103" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="printProjectView.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/templates/printProjectView.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="8" selection-start="974" selection-end="974" vertical-scroll-proportion="-13.125">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectCreator.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectCreator.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.708333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectEditor.jsp" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="222" column="109" selection-start="13152" selection-end="13152" vertical-scroll-proportion="0.4224924">
+              <folding>
+                <marker date="1358693885000" expanded="true" signature="8488:8513" placeholder="..." />
+                <marker date="1358693885000" expanded="true" signature="11562:11585" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="creator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="231" column="7" selection-start="8634" selection-end="8763" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="projectViewer.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="35" selection-start="1381" selection-end="1381" vertical-scroll-proportion="-8.833333">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProjectDataEntity.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="81" column="27" selection-start="1651" selection-end="1665" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -268,21 +209,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/home.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/navbar.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" />
         <option value="$PROJECT_DIR$/src/main/java/component/service/UserService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/apiDocs.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/component/controller/FurnitureController.java" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/creator.js" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/css/style.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/templates/printProjectView.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp" />
       </list>
     </option>
   </component>
@@ -332,7 +274,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -399,6 +341,264 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="project" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="catalog" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="WEB-INF" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="front" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="webapp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -429,7 +629,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -450,10 +650,40 @@
               <option name="myItemId" value="main" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="entity" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="InteriorDesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="interiordesigner" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -490,7 +720,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager" selected="Glassfish Server.Glassfish 3.1.2.2">
+  <component name="RunManager" selected="Jetty Server.Jetty 7.6.7.v20120910">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
@@ -627,7 +857,6 @@
       <method />
     </configuration>
     <configuration default="false" name="Glassfish 3.1.2.2" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Glassfish 3.1.2.2">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/InteriorDesigner/" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="InteriorDesigner:war">
@@ -701,8 +930,14 @@
         </option>
       </method>
     </configuration>
-    <configuration default="false" name="Jetty 9.0.0.M3" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 9.0.0.M3">
-      <deployment />
+    <configuration default="false" name="Jetty 7.6.7.v20120910" type="JettyConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="Jetty 7.6.7.v20120910">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/InteriorDesigner/" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="InteriorDesigner:war exploded">
+          <settings DEPLOYMENT_METHOD="contexts" />
+        </artifact>
+      </deployment>
       <server-settings>
         <data>
           <option name="configFiles">
@@ -711,17 +946,109 @@
                 <option name="active" value="true" />
                 <option name="path" value="etc/jetty-jmx.xml" />
               </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-ajp.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-bio-ssl.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-bio.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-contexts.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-debug.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-deploy.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-fileserver.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-ipaccess.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-logging.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-monitor.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-overlay.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-plus.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-policy.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-proxy.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-requestlog.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-rewrite.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-spdy-proxy.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-spdy.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-ssl.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-stats.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-testrealm.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-webapps.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty-xinetd.xml" />
+              </JettyConfigFile>
+              <JettyConfigFile>
+                <option name="path" value="etc/jetty.xml" />
+              </JettyConfigFile>
             </list>
           </option>
         </data>
       </server-settings>
       <predefined_log_file id="Jetty" enabled="true" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <method />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper VM_VAR="" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method>
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="InteriorDesigner:war exploded" />
+        </option>
+      </method>
     </configuration>
     <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Glassfish Server.Glassfish 3.1.2.2" />
-      <item index="1" class="java.lang.String" itemvalue="Jetty Server.Jetty 9.0.0.M3" />
+      <item index="1" class="java.lang.String" itemvalue="Jetty Server.Jetty 7.6.7.v20120910" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -755,11 +1082,31 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView" selected-index="0">
+    <todo-panel id="selected-file">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="default-changelist">
+      <are-packages-shown value="false" />
+      <are-modules-shown value="false" />
+      <flatten-packages value="false" />
+      <is-autoscroll-to-source value="false" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298217" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -773,17 +1120,17 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33048433" sideWeight="0.49675852" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1993517" sideWeight="0.23076923" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32763532" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1993517" sideWeight="0.6296296" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37037036" sideWeight="0.49675852" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -847,6 +1194,27 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/FurnitureController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="96" selection-start="3416" selection-end="3420" vertical-scroll-proportion="0.66751915">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="43" selection-start="1363" selection-end="1363" vertical-scroll-proportion="0.6733167">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/dispatcher-servlet.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/securityConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
@@ -854,108 +1222,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/UserController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/general/head.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="129" selection-start="2240" selection-end="2247" vertical-scroll-proportion="0.0">
+        <state line="30" column="0" selection-start="1779" selection-end="1860" vertical-scroll-proportion="-18.75">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/views.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="80" selection-start="1347" selection-end="1359" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="28" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="javaeeDummy://JavaeeElement:/16d65d86/sessionFactory/InteriorDesigner/hibernate/Hibernate/PersistenceModel">
-      <provider selected="true" editor-type-id="com.intellij.jpa.view.editor.PersistenceUnitMappingGraphProvider">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/dao/hibernate/FurnitureDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="474" selection-end="474" vertical-scroll-proportion="0.0">
+        <state line="30" column="103" selection-start="1887" selection-end="1887" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/entity/UserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="94" column="106" selection-start="2373" selection-end="2373" vertical-scroll-proportion="0.0">
+        <state line="20" column="13" selection-start="535" selection-end="535" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/FurnitureController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/persistanceConfig.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="96" selection-start="3416" selection-end="3420" vertical-scroll-proportion="61.933334">
+        <state line="30" column="62" selection-start="2188" selection-end="2188" vertical-scroll-proportion="0.88029927">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
+    <entry file="file://$PROJECT_DIR$/src/main/java/entity/ProjectDataEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="9" selection-start="17" selection-end="17" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/HomeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="89" selection-start="2257" selection-end="2257" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/service/FurnitureService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="24" column="24" selection-start="717" selection-end="717" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/component/dao/hibernate/ProjectDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="13" selection-start="509" selection-end="509" vertical-scroll-proportion="0.0">
+        <state line="81" column="27" selection-start="1651" selection-end="1665" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/component/controller/ProjectController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="28" selection-start="6359" selection-end="6391" vertical-scroll-proportion="0.0">
+        <state line="136" column="96" selection-start="6247" selection-end="6253" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="260" column="0" selection-start="5393" selection-end="5598" vertical-scroll-proportion="-4.56">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectViewer.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="35" selection-start="1381" selection-end="1381" vertical-scroll-proportion="-8.833333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/templates/printProjectView.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="8" selection-start="974" selection-end="974" vertical-scroll-proportion="-13.125">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectCreator.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="9.708333">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="7" selection-start="8634" selection-end="8763" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/front/pages/project/projectEditor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="134" column="52" selection-start="6866" selection-end="6866" vertical-scroll-proportion="-52.916668">
+        <state line="222" column="109" selection-start="13152" selection-end="13152" vertical-scroll-proportion="0.4224924">
           <folding>
-            <marker date="1358082413000" expanded="false" signature="5159:5184" placeholder="..." />
+            <marker date="1358693885000" expanded="true" signature="8488:8513" placeholder="..." />
+            <marker date="1358693885000" expanded="true" signature="11562:11585" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/creator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1053" selection-end="1053" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="181" column="13" selection-start="3876" selection-end="3876" vertical-scroll-proportion="0.38356164">
-          <folding />
         </state>
       </provider>
     </entry>

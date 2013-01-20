@@ -92,6 +92,22 @@
 
 <script>
     $(function(){
+        var pointArray = [];
+
+        $(function(){
+            $(".wall").each(function(){
+                var firstPoint = new point($(this).css("left").replace("px", ""), $(this).css("top").replace("px", ""));
+                var secondPoint = null;
+                if(parseInt($(this).css("width").replace("px", ""), 10) > parseInt($(this).css("height").replace("px", ""), 10)) {
+                    secondPoint = new point($(this).css("left").replace("px", ""), parseInt(Math.abs($(this).css("left").replace("px", "") - $(this).css("width").replace("px", "")), 10));
+                } else {
+                    secondPoint = new point($(this).css("top").replace("px", ""), parseInt(Math.abs($(this).css("top").replace("px", "") - $(this).css("height").replace("px", "")), 10));
+                }
+                pointArray.push(firstPoint);
+                pointArray.push(secondPoint);
+            });
+        });
+
         $(document).on('click', '.items-tab', function(){
         var _this = $(this);
         var itemsCategory = _this.attr("href").replace("#", "");
@@ -152,10 +168,35 @@
                     clickCounter++;
                     var _event_click = event;
                     if(clickCounter == 1) {
-                        x1 = event.pageX - $(this).offset().left;
-                        y1 = event.pageY - $(this).offset().top;
+                        _x1 = event.pageX - $(this).offset().left;
+                        _y1 = event.pageY - $(this).offset().top;
 
-                        var wall = "<div class='wall scalable obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
+                        if(pointArray.length>0){
+
+                            var lowestDistance = 51;
+
+                            console.log("sprawdzam warunek");
+                            for(i=0; i<pointArray.length; i++){
+                                var distance = Math.sqrt((Math.pow(Math.abs(pointArray[i].x - _x1), 2) + Math.pow(Math.abs(pointArray[i].y - _y1), 2)));
+                                console.log("Odleglosc: " + distance);
+                                if(distance < 50) {
+                                    if(distance < lowestDistance) {
+                                        lowestDistance = distance;
+                                        x1 = pointArray[i].x;
+                                        y1 = pointArray[i].y;
+                                        console.log("Punkt startowy zmieniono na : " + x1 + "," + y1);
+                                    }
+                                }
+                            }
+                            if(lowestDistance == 51) {
+                                x1 = _x1;
+                                y1 = _y1;
+                                pointArray.push(new point(x1, y1));
+                                console.log("  Dodaje pierwszy punkt: " + x1 + " " + y1);
+                            }
+                        }
+
+                        var wall = "<div class='wall obstacle currently' style='position:absolute; top:" + y1 + "px; left:" + x1 + "px;'><span class='wall-height'></span></div>";
 
                         var i=0;
                         $("#projectDataViewer").append(wall);
@@ -177,12 +218,31 @@
                                 var _wall_left = Math.min(x1,x2);
 
                                 if(_wall_width < _wall_height){
-                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("height", _wall_height).css("width", 3);
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("height", _wall_height).css("width", 3).addClass("scalable-ns").removeClass("scalable-we");
+                                    pointArray.push(new point(_wall_left, parseInt(Math.abs(_wall_top - _wall_height), 10)));
+                                    console.log("drugi punkt, sciana wysoka " + parseInt(Math.abs(_wall_top + _wall_height), 10));
                                 } else {
-                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("width", _wall_width).css("height", 3);
+                                    _this_wall.css("top", _wall_top).css("left", _wall_left).css("width", _wall_width).css("height", 3).removeClass("scalable-ns").addClass("scalable-we");
+                                    pointArray.push(new point(_wall_top, parseInt(Math.abs(_wall_left + _wall_width), 10)));
+                                    console.log("drugi punkt, sciana szeroka " + parseInt(Math.abs(_wall_left + _wall_width), 10));
                                 }
 
                                 $("#projectDataViewer").removeClass("createWallMode");
+                            if ($("#projectDataViewer .currently").hasClass("scalable-we")) {
+                                   $("#projectDataViewer .currently").resizable({ handles: 'w,e',
+                                   resize: function( event, ui ) {
+                                       $(this).children("span").text($(this).css("width").replace("px", " cm"));
+                                   }
+                               }).draggable({ containment:"#projectDataViewer", obstacle:".obstacle", preventCollision:true });
+                            } else {
+                                $("#projectDataViewer .currently").resizable({
+                                    handles: 'w,e',
+                                    resize: function( event, ui ) {
+                                        $(this).children("span").text($(this).css("height").replace("px", " cm"));
+                                    }
+                                }).draggable({ containment:"#projectDataViewer", obstacle:".obstacle", preventCollision:true });
+                            }
+
                                 _this_wall.removeClass('currently');
                                 $("#projectDataViewer").off();
 
@@ -230,5 +290,11 @@
             _parent.children('.f_width').html(height.replace("px", " cm"));
             _parent.children('.f_height').html(width.replace("px", " cm"));
         });
+
+        function point(x, y) {
+            this.x = x;
+            this.y = y;
+        }
+
     });
 </script>

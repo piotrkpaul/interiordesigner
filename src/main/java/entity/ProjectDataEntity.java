@@ -2,7 +2,6 @@ package entity;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
-import java.util.Arrays;
 
 /**
  * Date: 25.12.2012

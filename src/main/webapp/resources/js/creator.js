@@ -24,9 +24,10 @@ $(document).on('click', '.furniture-preview', function (event) {
                 furniture.attr("data-original-title", furnitureData.itemName);
 
                 furniture.attr("data-content", itemDetails + furnitureData.itemDescription);
-                furniture.clickover({ html:true}).clickover();
             });
+
     }
+    furniture.clickover({ html:true}).clickover("show");
 });
 
 

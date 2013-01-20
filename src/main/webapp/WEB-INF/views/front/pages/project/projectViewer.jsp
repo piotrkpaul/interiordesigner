@@ -20,6 +20,7 @@
         <div class="right">
             <a class="btn btn-small btn-success" href="${pageContext.request.contextPath}/project/edit/${projectDataEntity.id}">Edytuj</a>
             <a class="btn btn-small btn-danger" href="${pageContext.request.contextPath}/project/delete/${projectDataEntity.id}">Usuń</a>
+            <a class="btn btn-small" target="_blank" href="${pageContext.request.contextPath}/project/print/${projectDataEntity.id}">Drukuj</a>
         </div>
     </div>
 </c:if>

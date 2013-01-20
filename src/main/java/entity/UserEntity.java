@@ -1,7 +1,6 @@
 package entity;
 
 import org.hibernate.validator.constraints.Email;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;

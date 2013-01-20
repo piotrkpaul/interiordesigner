@@ -1,7 +1,6 @@
 package component.dao;
 
 import entity.FurnitureitemsEntity;
-import entity.UserEntity;
 
 import java.util.List;
 
