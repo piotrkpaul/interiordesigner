@@ -1,5 +1,4 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
 <div class="container">
 
     <form method="post" class="form-signin" action="j_spring_security_check">

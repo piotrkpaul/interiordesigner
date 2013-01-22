@@ -6,6 +6,18 @@
     <title>Interior Designer - cloud-based web application for your interior projects</title>
     <script src="${pageContext.request.contextPath}/resources/js/jquery.js"></script>
     <link href="${pageContext.request.contextPath}/resources/css/style.css" rel="stylesheet" />
+    <script>
+        console.log("start");
+            $("#projectDataViewer div").each(function(){
+                var _this = $(this);
+                console.log("123");
+                console.log(parseInt(_this.css("width").replace("px", "")/2, 10));
+                _this.css("width", parseInt(_this.css("width").replace("px", "")/2, 10));
+                _this.css("height", parseInt(_this.css("height").replace("px", "")/2, 10));
+                _this.css("top", parseInt(_this.css("top").replace("px", "")/2, 10));
+                _this.css("left", parseInt(_this.css("left").replace("px", "")/2, 10));
+            });
+    </script>
     <style>
         body {
             padding: 10px 20px 10px 20px;
@@ -25,12 +37,6 @@
             font-family: Verdana; font-size: 14px; line-height: 1.5;
         }
         .projectDataViewer {
-        /* for firefox, safari, chrome, etc. */
-            -webkit-transform: rotate(-90deg);
-            -moz-transform: rotate(-90deg);
-            /* for ie */
-            filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-
             position: relative;
             float: left; width: 100%;
             background: url("${pageContext.request.contextPath}/resources/img/grid.png") top left;
@@ -39,6 +45,9 @@
         }
         .projectTableInfo .dates {
             font-size: 11px;
+        }
+        .projectDataViewer .wall {
+            outline: 1px solid;
         }
 
     </style>

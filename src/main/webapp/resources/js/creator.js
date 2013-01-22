@@ -180,10 +180,10 @@ $(function () {
         $(".furniture").each(function (index) {
             furnitureList.push(new furnitureItem(
                 $(this).find(".f_id")[0].innerText,
-                $(this).css('left').replace('px', ''),
-                $(this).css('top').replace('px', ''),
-                $(this).css('width').replace('px', ''),
-                $(this).css('height').replace('px', ''))
+                parseInt($(this).css('left').replace('px', ''), 10),
+                parseInt($(this).css('top').replace('px', ''), 10),
+                parseInt($(this).css('width').replace('px', ''), 10),
+                parseInt($(this).css('height').replace('px', ''), 10))
             );
         });
 
@@ -192,8 +192,8 @@ $(function () {
             var x2 = parseInt($(this).css('left').replace('px', ''), 10) + parseInt($(this).css('width').replace('px', ''), 10);
             var y2 = parseInt($(this).css('top').replace('px', ''), 10) + parseInt($(this).css('height').replace('px', ''), 10);
             wallList.push(new wallItem(
-                $(this).css('left').replace('px', ''),
-                $(this).css('top').replace('px', ''),
+                parseInt($(this).css('left').replace('px', ''), 10),
+                parseInt($(this).css('top').replace('px', ''), 10),
                 x2,
                 y2)
             );

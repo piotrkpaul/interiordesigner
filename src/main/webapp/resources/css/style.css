@@ -96,13 +96,6 @@ section blockquote {
 .form-signin .checkbox {
     margin-bottom: 10px;
 }
-.form-signin input[type="text"],
-.form-signin input[type="password"] {
-    font-size: 16px;
-    height: auto;
-    margin-bottom: 15px;
-    padding: 7px 9px;
-}
 #userEntity input.emailAvailable {
     background: #CFF8D1 url(../img/valid_tick.png) no-repeat 300px !important;
 }
@@ -340,7 +333,7 @@ section #accordion .ui-accordion-content .btn-group .btn {
 }
 .furniture {
     width: 30px;
-    outline: 1px dashed #000;
+    border: 1px dashed #000;
     height: 30px;
     background: #E4E4E4;
 }
