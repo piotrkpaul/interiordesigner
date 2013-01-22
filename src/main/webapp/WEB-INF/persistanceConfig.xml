@@ -8,9 +8,9 @@
 
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
         <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql://localhost:3306/68_cmsSpringDatabase?useUnicode=yes&amp;characterEncoding=UTF-8"/>
-        <property name="username" value="root" />
-        <property name="password" value=""/>
+        <property name="url" value="jdbc:mysql://plyr.pl:3306/68_cmsSpringDatabase?useUnicode=yes&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="68_databaseRoot" />
+        <property name="password" value="password"/>
     </bean>
     <bean id="sessionFactory" class="org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean">
         <property name="dataSource" ref="dataSource"/>
@@ -26,10 +26,10 @@
                 <prop key="hibernate.cache.use_second_level_cache">true</prop>
                 <prop key="hibernate.cache.use_query_cache">true</prop>
                 <prop key="hibernate.cache.region.factory_class">net.sf.ehcache.hibernate.EhCacheRegionFactory</prop>
-                <prop key="hibernate.connection.url"><![CDATA[jdbc:mysql://localhost:3306/68_cmsSpringDatabase?useUnicode=yes&characterEncoding=UTF-8]]></prop>
+                <prop key="hibernate.connection.url"><![CDATA[jdbc:mysql://plyr.pl:3306/68_cmsSpringDatabase?useUnicode=yes&characterEncoding=UTF-8]]></prop>
                 <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
-                <prop key="hibernate.connection.username">root</prop>
-                <prop key="hibernate.connection.password"></prop>
+                <prop key="hibernate.connection.username">68_databaseRoot</prop>
+                <prop key="hibernate.connection.password">password</prop>
             </props>
         </property>
     </bean>
