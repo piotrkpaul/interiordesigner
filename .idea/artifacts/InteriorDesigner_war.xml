@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" name="InteriorDesigner:war">
-    <output-path>$PROJECT_DIR$/target</output-path>
-    <root id="archive" name="InteriorDesigner.war">
-      <element id="artifact" artifact-name="InteriorDesigner:war exploded" />
-    </root>
-  </artifact>
-</component>
